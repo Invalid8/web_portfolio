@@ -1,14 +1,10 @@
 <script>
-	import Footer from '$lib/Footer.svelte';
-	import Header from '$lib/Header.svelte';
-	export let data;
+	import {AppInfo} from '$lib/common';
 </script>
 
 <svelte:head>
-	<title>Kinde Auth | SvelteKit Starter Kit</title>
+	<title>{AppInfo.title} | Home</title>
 </svelte:head>
-
-<Header isAuthenticated={data.isAuthentication} user={data.userProfile} />
 
 <main>
 	<div class="container">
@@ -28,4 +24,3 @@
 		</div>
 	</div>
 </main>
-<Footer />

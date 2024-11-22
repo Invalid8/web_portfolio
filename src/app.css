@@ -1,3 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --border: 240 5% 91%;
+    /* Light gray, #E5E5E5 */
+    --input: 240 6% 97%;
+    /* Lighter gray, #F7F7F7 */
+    --ring: 246.7 91.2% 63.9%;
+    /* Example blue for focus rings, #625BF6 */
+    --background: 0 0% 100%;
+    /* White background, #FFFFFF */
+    --foreground: 240 10% 10%;
+    /* Dark foreground, #1A1A1A */
+    --primary: 77.1 72.6% 70.6%;
+    /* Light green, #D3E97A */
+    --primary-foreground: 240 10% 10%;
+    /* Dark contrast for primary, #1A1A1A */
+    --secondary: 246.7 91.2% 63.9%;
+    /* Secondary blue, #625BF6 */
+    --secondary-foreground: 0 0% 100%;
+    /* White contrast, #FFFFFF */
+    --destructive: 0 75% 60%;
+    /* Red for destructive actions, #E63946 */
+    --destructive-foreground: 0 0% 100%;
+    /* White contrast, #FFFFFF */
+    --muted: 240 5% 80%;
+    /* Muted gray, #CCCCCC */
+    --muted-foreground: 240 10% 30%;
+    /* Darker muted, #4D4D4D */
+    --subtext: 240 1.6% 61.2%;
+    /* Subtext gray, #99999C */
+  }
+
+  .dark {
+    --border: 240 5% 30%;
+    /* Dark gray for borders, #4D4D4D */
+    --input: 240 6% 25%;
+    /* Slightly darker input background, #3C3C3C */
+    --ring: 246.7 91.2% 53%;
+    /* Muted blue for focus rings, #4A48B4 */
+    --background: 240 10% 10%;
+    /* Dark background, #1A1A1A */
+    --foreground: 0 0% 100%;
+    /* White text, #FFFFFF */
+    --primary: 77.1 72.6% 40%;
+    /* Darker green, #6B8E23 */
+    --primary-foreground: 0 0% 100%;
+    /* White contrast, #FFFFFF */
+    --secondary: 246.7 91.2% 53%;
+    /* Muted blue, #4A48B4 */
+    --secondary-foreground: 0 0% 100%;
+    /* White contrast, #FFFFFF */
+    --destructive: 0 75% 45%;
+    /* Darker red, #B22222 */
+    --destructive-foreground: 0 0% 100%;
+    /* White contrast, #FFFFFF */
+    --muted: 240 5% 20%;
+    /* Dark muted gray, #333333 */
+    --muted-foreground: 0 0% 100%;
+    /* White contrast, #FFFFFF */
+    --subtext: 240 1.6% 70%;
+    /* Slightly lighter subtext, #B3B3B6 */
+  }
+}
+
+
+@font-face {
+  font-family: "Bebas Neue", ;
+  src: url("/fonts/BebasNeue-Regular.ttf") format("ttf2"),
+    url("/fonts/Bebas Neue-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  @apply bg-white dark:bg-black text-black dark:text-white text-center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bebas Neue", "sans-serif";
+}
