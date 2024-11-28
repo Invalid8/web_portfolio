@@ -52,7 +52,7 @@
 	</ul>
 {/snippet}
 
-<header class="h-[70px] sticky top-0 left-0 right-0 z-20 bg-background">
+<header class="h-[70px] sticky top-0 left-0 right-0 z-20 bg-background max-w-screen-xl mx-auto">
 	<nav class="nav px-[1.5rem] md:px-[3rem] ld:px-[6rem] container mx-auto items-center">
 		<h1 class="text-3xl uppercase tracking-wider">
 			<a href="/" class="font-Bebas text-primary">{AppInfo.author}</a>

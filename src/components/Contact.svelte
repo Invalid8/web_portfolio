@@ -41,7 +41,10 @@
 	}
 </script>
 
-<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12" id="Contact">
+<section
+	class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12 mx-auto max-w-screen-xl"
+	id="Contact"
+>
 	<div class="he_ space-y-2">
 		<h2 class="md:text-7xl text-4xl uppercase">Lets Connect</h2>
 		<p class="text-subtext">
