@@ -14,3 +14,9 @@ export const AppInfo = {
 		form_code: '1b1d7eeefdbc50328a4528061615e6c3'
 	}
 };
+
+export const SiteData = {
+	name: 'Daniel Fadamitan',
+	summary:
+		'A nigerian based front-end developer passionate about building accessible and user friendly websites.'
+};

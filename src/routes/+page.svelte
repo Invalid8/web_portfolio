@@ -2,7 +2,7 @@
 	import Astronaut from '$components/Astronaut.svelte';
 	import ProjectCard from '$components/cards/ProjectCard.svelte';
 	import Contact from '$components/Contact.svelte';
-	import {AppInfo} from '$lib/common';
+	import {AppInfo, SiteData} from '$lib/common';
 	import {projects} from '$data/projects';
 </script>
 
@@ -12,15 +12,15 @@
 
 <main>
 	<div
-		class="banner grid md:grid-cols-2 grid-cols-1 h-full place-content-center min-h-[calc(100vh_-_70px)] sm:p-8 p-6 py-8 place-items-center sm:gap-8"
+		class="banner flex md:flex-row flex-col flex-wrap justify-center items-center h-full min-h-[calc(100vh_-_70px)] sm:p-8 p-6 py-8 sm:gap-8"
 	>
-		<div class="box grid gap-4">
+		<div class="box grid gap-4 lg:basis-1/2">
 			<h1 class="lg:text-8xl md:text-7xl text-6xl font-bold uppercase">
-				Hi, I am <br /> Daniel Fadamitan.
+				Hi, I am <br />
+				<span data-site="name">{SiteData.name}</span>.
 			</h1>
-			<p class="text-subtext max-w-xl">
-				A nigerian based front-end developer passionate about building accessible and user friendly
-				websites.
+			<p class="text-subtext max-w-xl" data-site="summary">
+				{SiteData.summary}
 			</p>
 			<div class="btn-box flex gap-2 sm:gap-4 items-center flex-wrap sm:flex-nowrap">
 				<a
@@ -83,7 +83,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="box grid place-items-center">
+		<div class="box grid place-items-center basis-1/4">
 			<Astronaut />
 		</div>
 	</div>
