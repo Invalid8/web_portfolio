@@ -42,11 +42,11 @@
 		<li>
 			<a
 				class={cn(
-					'font-semibold hover:underline text-xl md:text-base',
-					$page?.url.pathname == '/#Contact' && 'text-primary underline'
+					'font-semibold hover:underline text-xl md:text-base rounded-full px-3 py-2 bg-primary text-primary-foreground',
+					$page?.url.hash.includes('/Contact') && 'text-primary underline'
 				)}
 				onclick={() => (menuIsOpen = false)}
-				href="/#Contact">Contact</a
+				href="#Contact">Contact Me</a
 			>
 		</li>
 	</ul>

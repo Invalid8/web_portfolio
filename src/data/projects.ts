@@ -8,7 +8,7 @@ export const projects: Project[] = [
 		content:
 			'This project enables users to create and participate in polls, with real-time results powered by WebSockets.',
 		link: 'https://pollproxy.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/ninjapolls',
+		github: 'https://github.com/invalid8/ninjapolls',
 		role: 'Fullstack Developer',
 		date: '2024-06-20',
 		type: 'challenge'
@@ -20,7 +20,7 @@ export const projects: Project[] = [
 		content:
 			'Designed to track transactions, display payment insights, and manage user accounts effectively.',
 		link: 'https://payshiga-dash.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/payshiga-dash',
+		github: 'https://github.com/invalid8/payshiga-dash',
 		role: 'Frontend Developer',
 		date: '2024-05-15',
 		type: 'contract'
@@ -32,7 +32,7 @@ export const projects: Project[] = [
 		content:
 			'Showcases advanced React and Next.js features, including server-side rendering and API integrations.',
 		link: 'https://dantolu33.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/fullstack-portfolio',
+		github: 'https://github.com/invalid8/fullstack_portfolio',
 		role: 'Fullstack Developer',
 		date: '2024-06-05',
 		type: 'freelance'
@@ -44,7 +44,7 @@ export const projects: Project[] = [
 		content:
 			'Built to connect students and educators, providing features for live talks and event scheduling.',
 		link: 'https://campus-talks.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/campus-talks',
+		github: 'https://github.com/invalid8/campus-talks',
 		role: 'Lead Developer',
 		date: '2024-05-01',
 		type: 'freelance'
@@ -55,7 +55,7 @@ export const projects: Project[] = [
 	// 	description: 'A full-stack application integrating PostgreSQL as the database solution.',
 	// 	content: 'This app demonstrates efficient use of database relations and features Prisma ORM.',
 	// 	link: 'https://fullstack-postgres-alpha.vercel.app',
-	// 	github: 'https://vercel.com/invalid8s-projects/fullstack-postgres',
+	// 	github: 'https://github.com/invalid8/fullstack-postgres',
 	// 	role: 'Database Architect',
 	// 	date: '2024-04-18',
 	// 	type: 'contract'
@@ -66,7 +66,7 @@ export const projects: Project[] = [
 		description: 'A simple guide application demonstrating various ways to center a div.',
 		content: 'An educational tool showcasing CSS techniques for vertical and horizontal centering.',
 		link: 'https://how-to-center-a-div.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/how-to-center-a-div',
+		github: 'https://github.com/invalid8/how-to-center-a-div',
 		role: 'Frontend Developer',
 		date: '2024-03-30',
 		type: 'challenge'
@@ -78,7 +78,7 @@ export const projects: Project[] = [
 	// 	content:
 	// 		'Automates university clearance processes, integrating user roles and document uploads.',
 	// 	link: 'https://e-clearance-365.vercel.app',
-	// 	github: 'https://vercel.com/invalid8s-projects/e-clearance-365',
+	// 	github: 'https://github.com/invalid8/e-clearance-365',
 	// 	role: 'Fullstack Developer',
 	// 	date: '2024-03-15',
 	// 	type: 'contract'
@@ -89,7 +89,7 @@ export const projects: Project[] = [
 		description: 'A lightweight analytics dashboard for monitoring data metrics.',
 		content: 'Provides data visualizations and insights for small to medium-sized projects.',
 		link: 'https://analytics-blond.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/analytics',
+		github: 'https://github.com/invalid8/analytics',
 		role: 'Frontend Developer',
 		date: '2024-02-28',
 		type: 'freelance'
@@ -100,7 +100,7 @@ export const projects: Project[] = [
 		description: 'A frontend beta for a manga reading platform with search and display features.',
 		content: 'Designed with a focus on user experience and fast search for manga enthusiasts.',
 		link: 'https://readerx.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/manga-reader-frontend-beta',
+		github: 'https://github.com/invalid8/manga-reader-frontend-beta',
 		role: 'Frontend Developer',
 		date: '2024-02-10',
 		type: 'challenge'
@@ -112,7 +112,7 @@ export const projects: Project[] = [
 		content: 'An experimental project focused on vibrant animations and creative illustrations.',
 
 		link: 'https://tackyfruits.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/tacky-fruits-hg3v',
+		github: 'https://github.com/invalid8/tacky-fruits',
 		role: 'Sole Developer',
 		date: '2024-01-25',
 		type: 'challenge'
@@ -124,7 +124,7 @@ export const projects: Project[] = [
 		content:
 			'This portfolio highlights my web development journey and integrates animations and responsive designs.',
 		link: 'https://fullstack-svelte-portfolio.vercel.app',
-		github: 'https://vercel.com/invalid8s-projects/web-portfolio',
+		github: 'https://github.com/invalid8/web-portfolio',
 		role: 'Sole Developer',
 		date: '2024-07-01',
 		type: 'freelance'

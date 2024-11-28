@@ -5,8 +5,12 @@
 	import {cn} from '$lib/utils';
 </script>
 
+<svelte:head>
+	<title>About Me | {AppInfo.title}</title>
+</svelte:head>
+
 <main>
-	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12">
+	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 mb-12">
 		<div class="he_ md:text-7xl text-4xl uppercase md:text-center">
 			<h2>About Me</h2>
 		</div>

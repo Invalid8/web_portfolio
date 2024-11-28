@@ -4,69 +4,73 @@ export const experiences: Experience[] = [
 	{
 		id: 1,
 		position: {
-			title: 'IT Consultant',
-			role: 'I solve daily IOT issues, by giving precise step by step solutions to client IT problems.',
-			duration: '2018 - 2019'
+			title: 'Frontend Developer',
+			role: 'Led the development of responsive and user-friendly websites, ensuring cross-browser compatibility and seamless user experiences.',
+			duration: '2019 - 2020'
 		},
 		company: {
-			name: 'Ulma IT Solutions',
-			location: 'Hybrid (Lagos, Nigeria)',
+			name: 'Integrity Ventures',
+			location: 'Lagos, Nigeria',
 			link: '',
-			logo: ''
+			logo: '/path-to-logo/integrity-ventures-logo.png' // Replace with the actual logo URL if available
 		},
-		skills: ['IOT', 'IT Consultant']
+		skills: [
+			'TypeScript',
+			'Tailwind CSS',
+			'Performance Optimization',
+			'Responsive Design',
+			'State Management'
+		]
 	},
 	{
 		id: 2,
 		position: {
-			title: 'Desktop Publisher',
-			role: 'Later I began working as a Desktop Publisher at a Cyber Cafe. While working there I was able to improve in my desktop publishing skills.',
-			duration: '2019 - 2020'
+			title: 'Frontend Developer',
+			role: 'Developed high-quality web applications as a freelancer, focusing on e-commerce platforms, SEO optimization, and single-page applications for a diverse range of clients.',
+			duration: '2020 - 2023'
 		},
 		company: {
-			name: 'Indiana Ventures',
-			location: 'On Site (Lagos, Nigeria)',
-			link: '',
-			logo: ''
+			name: 'Upwork',
+			location: 'Remote',
+			link: 'https://www.upwork.com',
+			logo: '/path-to-logo/upwork-logo.png' // Replace with the actual logo URL if available
 		},
 		skills: [
-			'IOT',
-			'Ms Word',
-			'Ms Excel',
-			'PowerPoint',
-			'Typing',
-			'Graphic Design',
-			'IT Consultant'
+			'React',
+			'SEO Optimization',
+			'E-commerce Development',
+			'Single-page Applications',
+			'Client Communication'
 		]
 	},
 	{
 		id: 3,
 		position: {
-			title: 'frontend web developer',
-			role: 'Currently Working as a Frontend & Backend Web development freelancer',
-			duration: '2020 - Current'
+			title: 'Frontend Developer',
+			role: 'Created and maintained a scalable component library using React and TypeScript, significantly reducing development time across multiple projects.',
+			duration: 'Feb 2024 - Apr 2024'
 		},
 		company: {
-			name: 'upwork',
+			name: 'Hynitr',
 			location: 'Remote',
-			link: 'https://upwork.com',
-			logo: '/assets/image/icons/upwork.svg'
+			link: '',
+			logo: '/path-to-logo/hynitr-logo.png' // Replace with the actual logo URL if available
 		},
-		skills: ['HTML5', 'React', 'JavaScript', 'CSS']
+		skills: ['React', 'TypeScript', 'Git Workflows', 'Code Reviews', 'UI/UX Enhancement']
 	},
 	{
 		id: 4,
 		position: {
-			title: 'backend web developer',
-			role: 'Currently Working as a Frontend & Backend Web development freelancer',
-			duration: '2021 - Current'
+			title: 'Frontend Developer',
+			role: 'Architect and maintain scalable frontend systems using modern frameworks, ensuring optimal performance and seamless user experiences for The Gigs platform.',
+			duration: 'May 2024 - Present'
 		},
 		company: {
-			name: 'freelancer',
+			name: 'TheGigs',
 			location: 'Remote',
-			link: 'https://freelancer.com',
-			logo: '/assets/image/icons/freelancer.svg'
+			link: 'https://thegigs.co',
+			logo: '/path-to-logo/thegigs-logo.png' // Replace with the actual logo URL if available
 		},
-		skills: ['Node Js', 'EJS', 'Django', 'Fastly', 'Express']
+		skills: ['Vue', 'TypeScript', 'Tailwind CSS', 'Responsive Design']
 	}
 ];

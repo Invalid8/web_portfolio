@@ -42,7 +42,7 @@
 </script>
 
 <section
-	class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12 mx-auto max-w-screen-xl"
+	class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12 mx-auto max-w-screen-lg"
 	id="Contact"
 >
 	<div class="he_ space-y-2">

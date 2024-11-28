@@ -1,12 +1,17 @@
 <script>
 	import ProjectCard from '$components/cards/ProjectCard.svelte';
 	import {projects} from '$data/projects';
+	import {AppInfo} from '$lib/common';
 </script>
+
+<svelte:head>
+	<title>Projects | {AppInfo.title}</title>
+</svelte:head>
 
 <main>
 	<!-- All projects -->
 	<section
-		class="sm:p-8 p-6 container space-y-6 sm:space-y-8 md:space-y-10 mx-auto max-w-screen-lg my-12"
+		class="sm:p-8 p-6 container space-y-6 sm:space-y-8 md:space-y-10 mx-auto max-w-screen-lg mb-12"
 		id="Featured"
 	>
 		<div class="he_ max-w-xl">
