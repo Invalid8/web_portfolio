@@ -14,6 +14,8 @@ const config = {
     adapter: adapter(),
     alias: {
       "$lib": "./src/lib/*",
+      "$type": "./src/type.ts",
+      "$data": "./src/data/*",
       "$utils": "./src/utils/*",
       "$components": "./src/components/*",
       "$layout": "./src/layout/*",

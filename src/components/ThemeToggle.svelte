@@ -17,7 +17,7 @@
 	/>
 	<label for="theme-toggle" class="toggle-label flex items-center justify-center">
 		{#if $theme === 'dark'}
-			<Moon class="w-6 h-6 text-white" /> <!-- Dark mode icon -->
+			<Moon class="w-6 h-6 text-gray-900" /> <!-- Dark mode icon -->
 		{:else}
 			<Sun class="w-6 h-6 text-gray-900" /> <!-- Light mode icon -->
 		{/if}
@@ -32,13 +32,13 @@
 
 	/* Style the toggle button */
 	.toggle-label {
-		@apply cursor-pointer h-12 w-12 rounded-full bg-amber-400 dark:bg-gray-800 flex items-center justify-center;
+		@apply cursor-pointer h-12 w-12 rounded-full bg-primary flex items-center justify-center;
 		@apply transition duration-300;
 		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 	}
 
 	/* Hover effects */
 	.toggle-label:hover {
-		@apply bg-amber-500 dark:bg-gray-700;
+		@apply bg-primary/70;
 	}
 </style>

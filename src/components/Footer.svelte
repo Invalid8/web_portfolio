@@ -1,11 +1,21 @@
-<footer class="footer">
-	<div class="container">
-		<strong class="text-heading-2">KindeAuth</strong>
-		<p class="footer-tagline text-body-3">
-			Visit our{' '}
-			<a href="https://kinde.com/docs">help center</a>
-		</p>
+<script>
+	import {AppInfo} from '$lib/common';
+</script>
 
-		<small class="text-subtle"> © 2023 KindeAuth, Inc. All rights reserved </small>
+<footer class="p-2 footer rounded-none bg-base-200 font-bold">
+	<div class="container mx-auto flex justify-center flex-wrap items-center">
+		<p class="flex items-center">
+			Made with <span class="text-red-500 mx-1">❤</span> using
+			<span class="ml-2 mr-1"
+				><img src="/icons/svelte-icon.svg" class="h-4" alt="Svelte icon" /></span
+			>
+			SvelteKit
+		</p>
+	</div>
+	<div class="text-center">
+		<small class="text-subtle">
+			© {new Date().getFullYear()}
+			{AppInfo.author} All rights reserved
+		</small>
 	</div>
 </footer>
