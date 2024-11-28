@@ -6,6 +6,7 @@
 	import ThemeToggle from '$components/ThemeToggle.svelte';
 	import Loader from '$components/Loader.svelte';
 	import {beforeNavigate, afterNavigate} from '$app/navigation';
+	import Contact from '$components/Contact.svelte';
 
 	let isLoading = false;
 
@@ -43,6 +44,9 @@
 
 	<slot />
 
+	<!-- <hr /> -->
+	<!-- Lets Connect -->
+	<Contact />
 	<Footer />
 	<ThemeToggle />
 </div>

@@ -13,7 +13,7 @@
 		</p>
 	</div>
 	<div class="text-center">
-		<small class="text-subtle">
+		<small class="text-subtext">
 			© {new Date().getFullYear()}
 			{AppInfo.author} All rights reserved
 		</small>

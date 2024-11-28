@@ -19,7 +19,7 @@
 		{#if $theme === 'dark'}
 			<Moon class="w-6 h-6 text-gray-900" /> <!-- Dark mode icon -->
 		{:else}
-			<Sun class="w-6 h-6 text-gray-900" /> <!-- Light mode icon -->
+			<Sun class="w-6 h-6 text-gray-300" /> <!-- Light mode icon -->
 		{/if}
 	</label>
 </div>

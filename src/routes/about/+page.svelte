@@ -1,32 +1,35 @@
 <script>
-	import Astronaut from '$components/Astronaut.svelte';
-	import ProjectCard from '$components/cards/ProjectCard.svelte';
-	import {AppInfo, SiteData} from '$lib/common';
-	import {projects} from '$data/projects';
+	import {experiences} from '$data/experiences';
+	import {skills} from '$data/skills';
+	import {AppInfo} from '$lib/common';
+	import {cn} from '$lib/utils';
 </script>
 
-<svelte:head>
-	<title>{AppInfo.title} | Home</title>
-</svelte:head>
-
 <main>
-	<div
-		class="banner flex md:flex-row flex-col flex-wrap justify-center items-center h-full min-h-[calc(100vh_-_70px)] sm:p-8 p-6 py-8 sm:gap-8"
-	>
-		<div class="box grid gap-4 lg:basis-1/2">
-			<h1 class="lg:text-8xl md:text-7xl text-6xl font-bold uppercase">
-				Hi, I am <br />
-				<span data-site="name">{SiteData.name}</span>.
-			</h1>
-			<p class="text-subtext max-w-xl" data-site="summary">
-				{SiteData.summary}
+	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12">
+		<div class="he_ md:text-7xl text-4xl uppercase md:text-center">
+			<h2>About Me</h2>
+		</div>
+		<div class="info space-y-4">
+			<p class="text-2xl font-medium">
+				I am a front-end developer based in Nigeria, with a Computer Science background.
 			</p>
-			<div class="btn-box flex gap-2 sm:gap-4 items-center flex-wrap sm:flex-nowrap">
+			<p class="text-subtext">
+				I am a front-end developer based in Nigeria with a strong foundation in Computer Science. I
+				specialize in building accessible and user-friendly web applications, with a particular
+				focus on React.js, Next.js, and TypeScript. Passionate about solving complex problems, I’m
+				also exploring Rust, Go, and UI/UX design to expand my skills. When I'm not coding, I enjoy
+				gaming, playing Mobile Legends, and diving into new technologies to stay ahead in my field.
+				Always curious and eager to learn, I aim to create impactful solutions through technology.
+			</p>
+			<div class="btn-box flex gap-2 pt-4 sm:gap-4 items-center flex-wrap sm:flex-nowrap">
 				<a
-					href="/#Contact"
+					href={AppInfo.links.resume}
+					rel="external"
+					target="_blank"
 					class="rounded-full bg-primary text-primary-foreground flex gap-4 items-center p-2.5 px-5 uppercase"
 				>
-					<span>Contact Me</span>
+					<span>Download Resume</span>
 					<div class="dot size-2 min-w-2 dark:bg-black bg-white rounded-full"></div>
 				</a>
 				<a
@@ -82,61 +85,46 @@
 				</a>
 			</div>
 		</div>
-		<div class="box grid place-items-center basis-1/4">
-			<Astronaut />
-		</div>
-	</div>
-
-	<!-- <hr /> -->
-
-	<!-- Featured projects -->
-	<section
-		class="sm:p-8 p-6 container space-y-6 sm:space-y-8 md:space-y-10 mx-auto max-w-screen-lg my-12"
-		id="Featured"
-	>
-		<div class="he_ max-w-xl">
-			<h2 class="sub-title text-4xl md:text-6xl">Featured Projects</h2>
-			<small class="text-subtext text-sm"
-				>Here are some of the selected projects that showcase my passion for front-end development.</small
-			>
-		</div>
-		<div class="bo_">
-			<div class="grid gap-8 md:gap-12">
-				{#each projects.slice(0, 5) as project}
-					<ProjectCard {project} />
-				{/each}
-			</div>
-			<p class="float-right mt-4 pt-4">
-				<a href="/project#Projects" class="text-primary uppercase border-b-2 pb-2 border-primary">
-					All Projects
-				</a>
-			</p>
-		</div>
 	</section>
-
 	<!-- <hr /> -->
-
-	<!-- Mini About me -->
 	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12">
 		<div class="he_ md:text-7xl text-4xl uppercase md:text-center">
-			<h2>About Me</h2>
+			<h2>My Capabilities</h2>
 		</div>
-		<div class="info space-y-4">
-			<p class="text-2xl font-medium">
-				I am a front-end developer based in Nigeria. Has Computer Science background.
-			</p>
-			<p class="text-subtext">
-				I am a front-end developer based in Nigeria with a strong foundation in Computer Science. I
-				specialize in building accessible and user-friendly web applications, with a particular
-				focus on React.js, Next.js, and TypeScript. Passionate about solving complex problems, I’m
-				also exploring Rust, Go, and UI/UX design to expand my skills. When I'm not coding, I enjoy
-				gaming, playing Mobile Legends, and diving into new technologies to stay ahead in my field.
-				Always curious and eager to learn, I aim to create impactful solutions through technology.
-			</p>
-			<br />
-			<a href="/about" class="text-primary uppercase border-b-2 pb-2 border-primary"
-				>More About ME</a
-			>
+		<div class="info flex gap-4 flex-wrap">
+			{#each skills as skill}
+				<button
+					type="button"
+					class={cn(
+						'tab border rounded-full px-4 py-2 uppercase transition-colors duration-300',
+						'hover:border-[--hover-color] hover:text-[--hover-color]'
+					)}
+					style={`--hover-color: ${skill.color};`}
+				>
+					{skill.value}
+				</button>
+			{/each}
+			<div class="tab border rounded-full px-4 py-2 uppercase">And More</div>
+		</div>
+	</section>
+	<!-- <hr /> -->
+	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12">
+		<div class="he_ md:text-7xl text-4xl uppercase md:text-center">
+			<h2>My Experience</h2>
+		</div>
+		<div class="info space-y-6 max-w-2xl">
+			{#each experiences as experience}
+				<div class="exp">
+					<div class="t flex gap-4 items-center justify-between">
+						<p class="font-bold text-lg capitalize">{experience.position.title}</p>
+						<span class="text-subtext">{experience.position.duration}</span>
+					</div>
+					<p class="text-primary capitalize">{experience.company.name}</p>
+					<p class="text-subtext mt-2">
+						{experience.position.role}
+					</p>
+				</div>
+			{/each}
 		</div>
 	</section>
 </main>

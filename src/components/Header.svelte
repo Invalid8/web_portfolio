@@ -23,16 +23,6 @@
 			<a
 				class={cn(
 					'font-semibold hover:underline text-xl md:text-base',
-					$page?.url.pathname == '/work' && 'text-primary underline'
-				)}
-				onclick={() => (menuIsOpen = false)}
-				href="/work">Work</a
-			>
-		</li>
-		<li>
-			<a
-				class={cn(
-					'font-semibold hover:underline text-xl md:text-base',
 					$page?.url.pathname == '/about' && 'text-primary underline'
 				)}
 				onclick={() => (menuIsOpen = false)}
@@ -43,7 +33,17 @@
 			<a
 				class={cn(
 					'font-semibold hover:underline text-xl md:text-base',
-					$page?.url.pathname == '/contact' && 'text-primary underline'
+					$page?.url.pathname == '/project' && 'text-primary underline'
+				)}
+				onclick={() => (menuIsOpen = false)}
+				href="/project">Project</a
+			>
+		</li>
+		<li>
+			<a
+				class={cn(
+					'font-semibold hover:underline text-xl md:text-base',
+					$page?.url.pathname == '/#Contact' && 'text-primary underline'
 				)}
 				onclick={() => (menuIsOpen = false)}
 				href="/#Contact">Contact</a

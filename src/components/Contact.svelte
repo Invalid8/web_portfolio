@@ -65,7 +65,7 @@
 		<div class="socials flex gap-4 sm:gap-6 items-center pt-4">
 			<a
 				target="_blank"
-				rel="no-referer"
+				rel="external"
 				href={AppInfo.links.linkedin}
 				class="rounded-full grid place-items-center"
 			>
@@ -92,7 +92,7 @@
 			</a>
 			<a
 				target="_blank"
-				rel="no-referer"
+				rel="external"
 				href={AppInfo.links.github}
 				class="rounded-full grid place-items-center"
 			>

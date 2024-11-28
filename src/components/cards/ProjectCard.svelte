@@ -29,17 +29,17 @@
 		</p>
 		<div class="crude pt-2 space-y-4 text-sm">
 			<span class="uppercase text-md">Project Info</span>
-			<hr />
+			<!-- <hr /> -->
 			<div class="flex justify-between gap-4">
 				<span>Year</span>
 				<span class="text-subtext">{new Date(project.date).getFullYear()}</span>
 			</div>
-			<hr />
+			<!-- <hr /> -->
 			<div class="flex justify-between gap-4">
 				<span>Role</span>
 				<span class="text-subtext">{project.role}</span>
 			</div>
-			<hr />
+			<!-- <hr /> -->
 		</div>
 		<div class="flex gap-4 md:gap-6 pt-4 flex-wrap">
 			<a
