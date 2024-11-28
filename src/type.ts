@@ -1,4 +1,3 @@
-import {experiences} from './data/experiences';
 export type Project = {
 	thumbnail: string;
 	title: string;

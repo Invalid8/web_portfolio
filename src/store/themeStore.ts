@@ -2,7 +2,7 @@ import {writable} from 'svelte/store';
 import {browser} from '$app/environment';
 
 // Initialize the store with the correct theme based on localStorage or system preference
-export const theme = writable('light');
+export const theme = writable('dark');
 
 if (browser) {
 	const storedTheme = localStorage.getItem('theme');

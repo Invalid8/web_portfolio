@@ -44,6 +44,7 @@
 		<div class="flex gap-4 md:gap-6 pt-4 flex-wrap">
 			<a
 				href={project.link}
+				target="_blank"
 				class="text-primary uppercase border-b-2 border-primary hover:opacity-90 flex gap-2"
 			>
 				Live Demo
@@ -51,6 +52,7 @@
 			</a>
 			<a
 				href={project.github}
+				target="_blank"
 				class="text-primary uppercase border-b-2 border-primary pb-2 hover:opacity-90"
 			>
 				<span class="flex gap-2">
