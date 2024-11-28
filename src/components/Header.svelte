@@ -14,7 +14,7 @@
 {#snippet links()}
 	<ul
 		class={cn(
-			'gap-6 md:gap-8 sm:inline-flex sm:items-center sm:text-start text-center transition-all sm:transition-none',
+			'gap-6 md:gap-8 sm:inline-flex sm:items-center sm:text-start text-center transition-all sm:transition-none ease-in-out',
 			menuIsOpen && 'grid',
 			!menuIsOpen && 'hidden'
 		)}
@@ -54,7 +54,7 @@
 
 <header class="h-[70px] sticky top-0 left-0 right-0 z-20 bg-background">
 	<nav
-		class="nav px-[1.5rem] md:px-[3rem] ld:px-[6rem] container max-w-screen-xl mx-auto items-center"
+		class="nav px-[1.5rem] md:px-[3rem] ld:px-[6rem] container max-w-screen-xl md:mx-auto items-center w-full"
 	>
 		<h1 class="text-3xl uppercase tracking-wider">
 			<a href="/" class="font-Bebas text-primary">{AppInfo.author}</a>

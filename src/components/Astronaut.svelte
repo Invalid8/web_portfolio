@@ -1,7 +1,7 @@
 <script lang="ts"></script>
 
 <svg
-	class="animated sm:w-[500px] w-full"
+	class="animated md:w-[500px] md:h-[500px] w-full h-[350px]"
 	id="freepik_stories-astronaut-helmet"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 500 500"

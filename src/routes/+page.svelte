@@ -11,11 +11,11 @@
 
 <main>
 	<div
-		class="banner flex md:flex-row flex-col flex-wrap justify-center items-center h-full min-h-[calc(100vh_-_70px)] sm:p-8 p-6 py-8 sm:gap-8"
+		class="banner flex md:flex-row flex-col flex-wrap justify-center items-center h-full sm:min-h-[calc(100vh_-_70px)] sm:p-8 p-6 pt-2 sm:gap-8 gap-4"
 	>
 		<div class="box grid gap-4 lg:basis-1/2">
-			<h1 class="lg:text-8xl md:text-7xl text-6xl font-bold uppercase">
-				Hi, I am <br />
+			<h1 class="lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold uppercase">
+				<span class="tracking-wide">Hi, I am</span> <br />
 				<span data-site="name">{SiteData.name}</span>.
 			</h1>
 			<p class="text-subtext max-w-xl" data-site="summary">
@@ -82,37 +82,10 @@
 				</a>
 			</div>
 		</div>
-		<div class="box grid place-items-center basis-1/4">
+		<div class="box grid place-items-center md:basis-1/4 aspect-auto">
 			<Astronaut />
 		</div>
 	</div>
-
-	<!-- <hr /> -->
-
-	<!-- Featured projects -->
-	<section
-		class="sm:p-8 p-6 container space-y-6 sm:space-y-8 md:space-y-10 mx-auto max-w-screen-lg my-12"
-		id="Featured"
-	>
-		<div class="he_ max-w-xl">
-			<h2 class="sub-title text-4xl md:text-6xl">Featured Projects</h2>
-			<small class="text-subtext text-sm"
-				>Here are some of the selected projects that showcase my passion for front-end development.</small
-			>
-		</div>
-		<div class="bo_">
-			<div class="grid gap-8 md:gap-12">
-				{#each projects.slice(0, 5) as project}
-					<ProjectCard {project} />
-				{/each}
-			</div>
-			<p class="float-right mt-4 pt-4">
-				<a href="/project#Projects" class="text-primary uppercase border-b-2 pb-2 border-primary">
-					All Projects
-				</a>
-			</p>
-		</div>
-	</section>
 
 	<!-- <hr /> -->
 
@@ -137,6 +110,33 @@
 			<a href="/about" class="text-primary uppercase border-b-2 pb-2 border-primary"
 				>More About ME</a
 			>
+		</div>
+	</section>
+
+	<!-- <hr /> -->
+
+	<!-- Featured projects -->
+	<section
+		class="sm:p-8 p-6 container space-y-6 sm:space-y-8 md:space-y-10 mx-auto max-w-screen-lg my-12"
+		id="Featured"
+	>
+		<div class="he_ max-w-xl">
+			<h2 class="sub-title text-4xl md:text-6xl">Featured Projects</h2>
+			<small class="text-subtext text-sm"
+				>Here are some of the selected projects that showcase my passion for front-end development.</small
+			>
+		</div>
+		<div class="bo_">
+			<div class="grid gap-12 md:gap-16">
+				{#each projects.slice(0, 5) as project}
+					<ProjectCard {project} />
+				{/each}
+			</div>
+			<p class="float-right mt-4 pt-4">
+				<a href="/project#Projects" class="text-primary uppercase border-b-2 pb-2 border-primary">
+					All Projects
+				</a>
+			</p>
 		</div>
 	</section>
 </main>

@@ -9,7 +9,7 @@
 	class="p-card grid md:grid-cols-[1fr_1fr] grid-cols-1 gap-6 sm:gap-8 md:gap-10 mx-auto items-center col-span-1"
 >
 	<div
-		class="image-in-box md:size-full sm:size-96 size-full aspect-square place-content-center relative rounded-md bg-[#777]/10 sm:p-8 p-6"
+		class="image-in-box md:size-full sm:size-96 size-full aspect-square place-content-center relative rounded-md bg-[#777]/10 sm:p-8 p-6 hover:-translate-y-5 hover:transition-[translate_0.3s_ease-in-out] cursor-pointer hover:bg-[#777]/20"
 	>
 		<div
 			class="tag absolute top-4 left-4 rounded-full bg-black text-white p-2 px-4 text-xs font-semibold capitalize"
@@ -19,6 +19,14 @@
 		<div class="img-box aspect-[10/6] bg-black rounded-md overflow-hidden">
 			<img src={project.thumbnail} alt={project.title} class="object-cover w-full h-full" />
 		</div>
+		<a
+			href={project.link}
+			aria-label="project-link"
+			class="absolute z-10 top-0 right-0 bottom-0 left-0 size-full"
+			target="_blank"
+		>
+			<span class="sr-only"></span>
+		</a>
 	</div>
 	<div class="md:space-y-4 space-y-2">
 		<span class="title font-semibold text-2xl">
