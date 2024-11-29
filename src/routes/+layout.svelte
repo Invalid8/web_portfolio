@@ -26,7 +26,8 @@
 
 	<slot />
 
-	<!-- <hr /> -->
+	<br />
+	<hr />
 	<!-- Lets Connect -->
 	<Contact />
 	<Footer />

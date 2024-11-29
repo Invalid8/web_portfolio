@@ -138,7 +138,7 @@
 				{/each}
 			</div>
 			<p class="float-right mt-4 pt-4">
-				<a href="/project#Projects" class="text-primary uppercase border-b-2 pb-2 border-primary">
+				<a href="/project" class="text-primary uppercase border-b-2 pb-2 border-primary">
 					All Projects
 				</a>
 			</p>
