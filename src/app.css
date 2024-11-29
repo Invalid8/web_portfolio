@@ -6,68 +6,173 @@
 @tailwind utilities;
 
 .test-a {
-  color: hsl(0, 0%, 100%);
+	color: hsl(0, 0%, 100%);
 }
 
 @layer base {
-  :root {
-    --border: 240 5% 91%;
-    --input: 240 6% 97%;
-    --ring: 246.7 91.2% 63.9%;
-    --background: 0 0% 100%;
-    --foreground: 240 10% 10%;
-    --primary: 77, 28%, 33%;
-    --primary-foreground: 0, 0%, 100%;
-    --secondary: 246.7 91.2% 63.9%;
-    --secondary-foreground: 0 0% 100%;
-    --destructive: 0 75% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --muted: 240 5% 80%;
-    --muted-foreground: 240 10% 30%;
-    --subtext: 240 1.6% 41.2%;
-  }
+	:root {
+		--border: 240 5% 91%;
+		--input: 240 6% 97%;
+		--ring: 246.7 91.2% 63.9%;
+		--background: 0 0% 100%;
+		--foreground: 240 10% 10%;
+		--primary: 77, 28%, 33%;
+		--primary-foreground: 0, 0%, 100%;
+		--secondary: 246.7 91.2% 63.9%;
+		--secondary-foreground: 0 0% 100%;
+		--destructive: 0 75% 60%;
+		--destructive-foreground: 0 0% 100%;
+		--muted: 240 5% 80%;
+		--muted-foreground: 240 10% 30%;
+		--subtext: 240 1.6% 41.2%;
+	}
 
-  .dark {
-    --border: 240 5% 30%;
-    --input: 240 6% 25%;
-    --ring: 246.7 91.2% 53%;
-    --background: 0, 0%, 4%;
-    --foreground: 0 0% 100%;
-    --primary: 77.1 72.6% 70.6%;
-    --primary-foreground: 240 10% 10%;
-    --secondary: 246.7 91.2% 53%;
-    --secondary-foreground: 0 0% 100%;
-    --destructive: 0 75% 45%;
-    --destructive-foreground: 0 0% 100%;
-    --muted: 240 5% 20%;
-    --muted-foreground: 0 0% 100%;
-    --subtext: 240 1.6% 70%;
-  }
+	.dark {
+		--border: 240 5% 30%;
+		--input: 240 6% 25%;
+		--ring: 246.7 91.2% 53%;
+		--background: 0, 0%, 4%;
+		--foreground: 0 0% 100%;
+		--primary: 77.1 72.6% 70.6%;
+		--primary-foreground: 240 10% 10%;
+		--secondary: 246.7 91.2% 53%;
+		--secondary-foreground: 0 0% 100%;
+		--destructive: 0 75% 45%;
+		--destructive-foreground: 0 0% 100%;
+		--muted: 240 5% 20%;
+		--muted-foreground: 0 0% 100%;
+		--subtext: 240 1.6% 70%;
+	}
 }
 
 @font-face {
-  font-family: 'Bebas Neue';
-  src:
-    url('/fonts/BebasNeue-Regular.woff') format('woff2'),
-    url('/fonts/Bebas Neue-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Bebas Neue';
+	src:
+		url('/fonts/BebasNeue-Regular.woff') format('woff2'),
+		url('/fonts/Bebas Neue-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 * {
-  font-family: 'Inter', sans-serif;
+	font-family: 'Inter', sans-serif;
 }
 
 body {
-  transition:
-    background-color 0.2s ease-in-out,
-    color 0.2s ease-in-out;
-  @apply bg-background text-foreground;
+	transition:
+		background-color 0.2s ease-in-out,
+		color 0.2s ease-in-out;
+	@apply bg-background text-foreground;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Bebas Neue', 'sans-serif';
+	font-family: 'Bebas Neue', 'sans-serif';
+}
+
+.content-box {
+	font-family: 'Inter', sans-serif; /* Consistent typography */
+	line-height: 1.6;
+}
+
+.content-box h1,
+.content-box h2,
+.content-box h3,
+.content-box h4 {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+	margin: 0.75rem 0;
+}
+
+.content-box h1 {
+	font-size: 2rem; /* Largest heading */
+}
+
+.content-box h2 {
+	font-size: 1.75rem;
+}
+
+.content-box h3 {
+	font-size: 1.5rem;
+}
+
+.content-box h4 {
+	font-size: 1.25rem;
+}
+
+.content-box p {
+	margin: 0.5rem 0; /* Spacing between paragraphs */
+	font-size: 1rem; /* Default body text size */
+}
+
+.content-box ul,
+.content-box ol {
+	margin: 1rem 0;
+	padding-left: 1.5rem; /* Indentation for lists */
+	list-style-type: disc;
+}
+
+.content-box ul li,
+.content-box ol li {
+	margin-bottom: 0.5rem; /* Space between list items */
+}
+
+.content-box a {
+	color: #007bff; /* Blue links */
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.content-box a:hover {
+	text-decoration: underline; /* Underline on hover for clarity */
+}
+
+.content-box code {
+	font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+	background-color: #f8f9fa; /* Light gray background */
+	padding: 0.2rem 0.4rem;
+	border-radius: 4px;
+	font-size: 0.9rem;
+	color: #d63384; /* Accent color for code */
+}
+
+.content-box blockquote {
+	margin: 1rem 0;
+	padding: 0.75rem 1.25rem;
+	border-left: 4px solid #007bff; /* Accent color for quotes */
+	background-color: #f8f9fa; /* Subtle background */
+	color: #555555; /* Muted text */
+	font-style: italic;
+}
+
+.content-box img {
+	max-width: 100%;
+	height: auto;
+	margin: 1rem 0;
+	border-radius: 6px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+}
+
+.content-box table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1rem 0;
+}
+
+.content-box table th,
+.content-box table td {
+	border: 1px solid #ddd;
+	padding: 0.75rem;
+	text-align: left;
+}
+
+.content-box table th {
+	background-color: #f1f1f1;
+	font-weight: bold;
+}
+
+.content-box table tr:nth-child(even) {
+	background-color: #f9f9f9; /* Alternating row colors */
 }

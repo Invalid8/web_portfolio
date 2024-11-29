@@ -3,6 +3,7 @@
 	import {skills} from '$data/skills';
 	import {AppInfo} from '$lib/common';
 	import {cn} from '$lib/utils';
+	import {ArrowUpRight} from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -31,10 +32,14 @@
 					href={AppInfo.links.resume}
 					rel="external"
 					target="_blank"
-					class="rounded-full bg-primary text-primary-foreground flex gap-4 items-center p-2.5 px-5 uppercase"
+					class="cn-btn rounded-full bg-primary text-primary-foreground flex gap-4 items-center p-2.5 px-5 uppercase"
 				>
 					<span>Download Resume</span>
-					<div class="dot size-2 min-w-2 dark:bg-black bg-white rounded-full"></div>
+					<div
+						class="dot size-2 min-w-2 dark:bg-background text-foreground rounded-full grid place-items-center overflow-hidden transition-[translate_0.3s_ease-in-out]"
+					>
+						<span class="icon"><ArrowUpRight size="18" /></span>
+					</div>
 				</a>
 				<a
 					target="_blank"
@@ -132,3 +137,23 @@
 		</div>
 	</section>
 </main>
+
+<style scoped>
+	.cn-btn {
+		.dot {
+			.icon {
+				@apply hidden;
+			}
+		}
+	}
+
+	.cn-btn:hover {
+		.dot {
+			@apply size-7;
+
+			.icon {
+				@apply block;
+			}
+		}
+	}
+</style>

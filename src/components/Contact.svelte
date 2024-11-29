@@ -126,7 +126,7 @@
 			<label class="block tracking-wide text-subtext text-sm mb-2" for="name">Name</label>
 			<input
 				required
-				class="appearance-none block w-full bg-gray-200 dark:bg-[#0f0f0f] text-subtext border border-none focus:outline-primary focus:ring-0 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+				class="appearance-none block w-full bg-gray-200 dark:bg-[#0f0f0f] text-subtext border focus:border-none focus:outline-primary focus:ring-0 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 				id="name"
 				name="name"
 				type="text"
@@ -142,7 +142,7 @@
 					type="email"
 					autocomplete="email"
 					required
-					class="appearance-none block w-full bg-gray-200 dark:bg-[#0f0f0f] text-subtext border border-none focus:outline-primary focus:ring-0 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+					class="appearance-none block w-full bg-gray-200 dark:bg-[#0f0f0f] text-subtext border focus:border-none focus:outline-primary focus:ring-0 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 				/>
 			</div>
 		</div>
@@ -151,7 +151,7 @@
 			<label class="block tracking-wide text-subtext text-sm mb-2" for="subject">Subject</label>
 			<input
 				required
-				class="appearance-none block w-full bg-gray-200 dark:bg-[#0f0f0f] text-subtext border border-none focus:outline-primary focus:ring-0 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+				class="appearance-none block w-full bg-gray-200 dark:bg-[#0f0f0f] text-subtext border focus:border-none focus:outline-primary focus:ring-0 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 				id="subject"
 				name="subject"
 				type="text"
@@ -163,7 +163,7 @@
 			<label class="block tracking-wide text-subtext text-sm mb-2" for="message">Message</label>
 			<textarea
 				required
-				class="appearance-none block w-full bg-gray-200 dark:bg-[#0f0f0f] text-subtext border border-none focus:outline-primary focus:ring-0 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+				class="appearance-none block w-full bg-gray-200 dark:bg-[#0f0f0f] text-subtext border focus:border-none focus:outline-primary focus:ring-0 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 				id="message"
 				name="message"
 				placeholder=""
@@ -180,3 +180,10 @@
 		>
 	</form>
 </section>
+
+<style scoped>
+	input,
+	textarea {
+		@apply border-2;
+	}
+</style>

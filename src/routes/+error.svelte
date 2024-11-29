@@ -1,5 +1,6 @@
 <script>
 	import {page} from '$app/stores';
+	import SpaceCat from '$components/SpaceCat.svelte';
 	import {HomeIcon} from 'lucide-svelte';
 </script>
 
@@ -7,7 +8,7 @@
 	class="error_page grid w-full h-full min-h-[85vh] place-content-center place-items-center p-4 md:p-6"
 >
 	<div class="info flex flex-col gap-3 text-center items-center">
-		<img src="/space-cat.svg" width="500" alt="cat in space" />
+		<SpaceCat />
 		<h1 class="text-4xl md:text-6xl uppercase mb-0 pb-0">
 			{$page?.error?.message || 'An Unexpected Error Occurred'}
 		</h1>

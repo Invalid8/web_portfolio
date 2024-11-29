@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
 	import Astronaut from '$components/Astronaut.svelte';
 	import ProjectCard from '$components/cards/ProjectCard.svelte';
 	import {AppInfo, SiteData} from '$lib/common';
 	import {projects} from '$data/projects';
+	import {ArrowUpRight} from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -24,10 +25,14 @@
 			<div class="btn-box flex gap-2 sm:gap-4 items-center flex-wrap sm:flex-nowrap">
 				<a
 					href="/#Contact"
-					class="rounded-full bg-primary text-primary-foreground flex gap-4 items-center p-2.5 px-5 uppercase"
+					class="cn-btn rounded-full bg-primary text-primary-foreground flex gap-4 items-center p-2.5 px-5 uppercase"
 				>
 					<span>Contact Me</span>
-					<div class="dot size-2 min-w-2 dark:bg-black bg-white rounded-full"></div>
+					<div
+						class="dot size-2 min-w-2 dark:bg-background text-foreground rounded-full grid place-items-center overflow-hidden transition-[translate_0.3s_ease-in-out]"
+					>
+						<span class="icon"><ArrowUpRight size="18" /></span>
+					</div>
 				</a>
 				<a
 					target="_blank"
@@ -140,3 +145,23 @@
 		</div>
 	</section>
 </main>
+
+<style scoped>
+	.cn-btn {
+		.dot {
+			.icon {
+				@apply hidden;
+			}
+		}
+	}
+
+	.cn-btn:hover {
+		.dot {
+			@apply size-7;
+
+			.icon {
+				@apply block;
+			}
+		}
+	}
+</style>

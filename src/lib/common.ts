@@ -1,8 +1,11 @@
+import {browser} from '$app/environment';
+import {goto} from '$app/navigation';
+
 export const AppInfo = {
 	title: 'Web Portfolio',
 	description: 'Your personal website and portfolio.',
 	author: 'Dalgoridim',
-	url: 'fullstack-svelte-portfolio.vercel.app',
+	url: 'https://fullstack-svelte-portfolio.vercel.app',
 	links: {
 		github: 'https://github.com/invalid8',
 		linkedin: 'https://www.linkedin.com/in/daniel-fadamitan-a08052247/',
@@ -20,3 +23,23 @@ export const SiteData = {
 	summary:
 		'A nigerian based front-end developer passionate about building accessible and user friendly websites.'
 };
+
+export function toSlug(value: string, remove?: boolean) {
+	return remove
+		? value.replaceAll('_', ' ').toLowerCase()
+		: value.replaceAll(' ', '_').toLowerCase();
+}
+
+export function canGoBack() {
+	if (!browser) return;
+	return window.history.length > 1;
+}
+
+export function goBack() {
+	if (!browser) return;
+
+	if (canGoBack()) window.history.back();
+	else {
+		goto('/');
+	}
+}

@@ -2,11 +2,12 @@ import type {Project} from '$type';
 
 export const projects: Project[] = [
 	{
-		thumbnail: 'https://placehold.co/800x600/6C757D/FFFFFF?text=Pollroxy',
-		title: 'Pollroxy',
+		id: '1',
+		thumbnail: 'https://placehold.co/800x600/6C757D/FFFFFF?text=Pollproxy',
+		title: 'Pollproxy',
 		description: 'A Svelte-based polling application for quick and interactive polls.',
 		content:
-			'This project enables users to create and participate in polls, with real-time results powered by WebSockets.',
+			'### About Pollproxy\nPollproxy is a dynamic web application designed to enable users to create and participate in interactive polls seamlessly. Built using **Svelte**, the project focuses on delivering a lightweight yet powerful experience for real-time polling.\n\n#### Features:\n- **Real-time Updates**: Powered by WebSockets for instant results.\n- **User-friendly Interface**: Simplistic and intuitive design for easy navigation.\n- **Responsive Design**: Fully optimized for both mobile and desktop users.\n\n#### My Role:\nAs a **Fullstack Developer**, I:\n- Designed the backend to handle high concurrency and real-time data sync.\n- Implemented a WebSocket-based architecture for seamless communication.\n- Ensured cross-browser compatibility and responsive UI.\n\n[Explore Pollproxy](https://pollproxy.vercel.app) | [View Source on GitHub](https://github.com/invalid8/ninjapolls)',
 		link: 'https://pollproxy.vercel.app',
 		github: 'https://github.com/invalid8/ninjapolls',
 		role: 'Fullstack Developer',
@@ -14,11 +15,12 @@ export const projects: Project[] = [
 		type: 'challenge'
 	},
 	{
+		id: '2',
 		thumbnail: 'https://placehold.co/800x600/28A745/FFFFFF?text=Payshiga+Dash',
 		title: 'Payshiga Dash',
 		description: 'A dashboard application for managing payments and financial data.',
 		content:
-			'Designed to track transactions, display payment insights, and manage user accounts effectively.',
+			'### About Payshiga Dash\nPayshiga Dash is a comprehensive financial dashboard built for businesses and individuals to efficiently manage their payment records and financial insights.\n\n#### Features:\n- **Transaction Management**: Visualize and manage all transactions in one place.\n- **Data Insights**: Interactive charts and analytics for better decision-making.\n- **User Management**: Role-based access for admins and users.\n\n#### My Role:\nAs a **Frontend Developer**, I:\n- Developed the UI using **React.js** and integrated it with a secure backend.\n- Worked on responsive design principles to ensure accessibility across devices.\n- Utilized **TailwindCSS** to achieve a sleek, modern design.\n\n[Explore Payshiga Dash](https://payshiga-dash.vercel.app) | [View Source on GitHub](https://github.com/invalid8/payshiga-dash)',
 		link: 'https://payshiga-dash.vercel.app',
 		github: 'https://github.com/invalid8/payshiga-dash',
 		role: 'Frontend Developer',
@@ -26,11 +28,12 @@ export const projects: Project[] = [
 		type: 'contract'
 	},
 	{
+		id: '3',
 		thumbnail: 'https://placehold.co/800x600/DC3545/FFFFFF?text=Fullstack+Portfolio',
 		title: 'Fullstack Portfolio',
 		description: 'A comprehensive full-stack portfolio showcasing diverse projects and skills.',
 		content:
-			'Showcases advanced React and Next.js features, including server-side rendering and API integrations.',
+			'### About Fullstack Portfolio\nThis portfolio is a testament to my full-stack development skills, built with cutting-edge tools like **Next.js** and **React.js**.\n\n#### Features:\n- **Dynamic Projects Page**: Fetches live data about my work from an external API.\n- **Authentication**: User login system implemented using **NextAuth**.\n- **Server-side Rendering**: Ensures fast load times and SEO optimization.\n\n#### My Role:\nAs a **Fullstack Developer**, I:\n- Designed and implemented API integrations to display projects dynamically.\n- Leveraged server-side rendering for better performance.\n- Focused on modular and reusable component design.\n\n[View Fullstack Portfolio](https://dantolu33.vercel.app) | [View Source on GitHub](https://github.com/invalid8/fullstack_portfolio)',
 		link: 'https://dantolu33.vercel.app',
 		github: 'https://github.com/invalid8/fullstack_portfolio',
 		role: 'Fullstack Developer',
@@ -38,56 +41,38 @@ export const projects: Project[] = [
 		type: 'freelance'
 	},
 	{
+		id: '4',
 		thumbnail: 'https://placehold.co/800x600/FFC107/000000?text=Campus+Talks',
 		title: 'Campus Talks',
 		description: 'A platform for hosting and sharing educational talks and events.',
 		content:
-			'Built to connect students and educators, providing features for live talks and event scheduling.',
+			'### About Campus Talks\nCampus Talks is an interactive platform designed to bridge the gap between educators and students by hosting and sharing educational talks and events.\n\n#### Features:\n- **Event Scheduling**: Organize talks with specific dates and times.\n- **Live Sessions**: Support for hosting live interactive talks.\n- **Community Engagement**: Tools for questions and discussions during events.\n\n#### My Role:\nAs the **Lead Developer**, I:\n- Oversaw the entire development process from design to deployment.\n- Built scalable REST APIs to support real-time functionality.\n- Optimized the app for low-latency live streaming.\n\n[Explore Campus Talks](https://campus-talks.vercel.app) | [View Source on GitHub](https://github.com/invalid8/campus-talks)',
 		link: 'https://campus-talks.vercel.app',
 		github: 'https://github.com/invalid8/campus-talks',
 		role: 'Lead Developer',
 		date: '2024-05-01',
 		type: 'freelance'
 	},
-	// {
-	// 	thumbnail: 'https://placehold.co/800x600/17A2B8/FFFFFF?text=Fullstack+Postgres',
-	// 	title: 'Fullstack Postgres',
-	// 	description: 'A full-stack application integrating PostgreSQL as the database solution.',
-	// 	content: 'This app demonstrates efficient use of database relations and features Prisma ORM.',
-	// 	link: 'https://fullstack-postgres-alpha.vercel.app',
-	// 	github: 'https://github.com/invalid8/fullstack-postgres',
-	// 	role: 'Database Architect',
-	// 	date: '2024-04-18',
-	// 	type: 'contract'
-	// },
 	{
+		id: '5',
 		thumbnail: 'https://placehold.co/800x600/343A40/FFFFFF?text=How+to+Center+a+Div',
 		title: 'How to Center a Div',
 		description: 'A simple guide application demonstrating various ways to center a div.',
-		content: 'An educational tool showcasing CSS techniques for vertical and horizontal centering.',
+		content:
+			'### About How to Center a Div\nThis project is an educational resource aimed at teaching developers how to center a div using various **CSS techniques**.\n\n#### Features:\n- **Interactive Code Examples**: Users can try out different centering methods.\n- **Browser Compatibility Notes**: Tips for handling edge cases in different browsers.\n- **Beginner-Friendly**: Written in simple language for new developers.\n\n#### My Role:\nAs a **Frontend Developer**, I:\n- Designed the UI to be clean and accessible.\n- Wrote interactive components for live CSS previews.\n- Focused on fast load times and simplicity.\n\n[Explore How to Center a Div](https://how-to-center-a-div.vercel.app) | [View Source on GitHub](https://github.com/invalid8/how-to-center-a-div)',
 		link: 'https://how-to-center-a-div.vercel.app',
 		github: 'https://github.com/invalid8/how-to-center-a-div',
 		role: 'Frontend Developer',
 		date: '2024-03-30',
 		type: 'challenge'
 	},
-	// {
-	// 	thumbnail: 'https://placehold.co/800x600/6610F2/FFFFFF?text=E+Clearance+365',
-	// 	title: 'E Clearance 365',
-	// 	description: 'An online clearance system for efficient document handling.',
-	// 	content:
-	// 		'Automates university clearance processes, integrating user roles and document uploads.',
-	// 	link: 'https://e-clearance-365.vercel.app',
-	// 	github: 'https://github.com/invalid8/e-clearance-365',
-	// 	role: 'Fullstack Developer',
-	// 	date: '2024-03-15',
-	// 	type: 'contract'
-	// },
 	{
+		id: '6',
 		thumbnail: 'https://placehold.co/800x600/6F42C1/FFFFFF?text=Turbo+Analytics',
 		title: 'Turbo Analytics',
 		description: 'A lightweight analytics dashboard for monitoring data metrics.',
-		content: 'Provides data visualizations and insights for small to medium-sized projects.',
+		content:
+			'### About Turbo Analytics\nTurbo Analytics is a web-based analytics tool designed for small to medium-sized projects that require simple and actionable data insights.\n\n#### Features:\n- **Data Visualizations**: Charts and graphs powered by **Chart.js**.\n- **Lightweight Design**: Focused on delivering performance and clarity.\n- **Customizable Widgets**: Allows users to personalize their dashboards.\n\n#### My Role:\nAs a **Frontend Developer**, I:\n- Created dynamic, interactive widgets using React.js.\n- Worked with **REST APIs** to fetch real-time data.\n- Ensured the app adhered to accessibility standards.\n\n[Explore Turbo Analytics](https://analytics-blond.vercel.app) | [View Source on GitHub](https://github.com/invalid8/analytics)',
 		link: 'https://analytics-blond.vercel.app',
 		github: 'https://github.com/invalid8/analytics',
 		role: 'Frontend Developer',
@@ -95,10 +80,12 @@ export const projects: Project[] = [
 		type: 'freelance'
 	},
 	{
+		id: 7,
 		thumbnail: 'https://placehold.co/800x600/FD7E14/FFFFFF?text=Reader+X',
 		title: 'Reader X',
 		description: 'A frontend beta for a manga reading platform with search and display features.',
-		content: 'Designed with a focus on user experience and fast search for manga enthusiasts.',
+		content:
+			'## Overview\nReader X is a beta platform catering to manga enthusiasts. It focuses on delivering a seamless reading experience with advanced search functionality and optimized layouts for various screen sizes.\n\n### Features\n- **Search Engine:** Instant search results for manga titles and authors.\n- **Responsive Reader:** Ensures a smooth reading experience on all devices.\n- **Bookmarking System:** Allows users to save their progress and favorite manga.\n\n### Contributions\nAs the frontend developer, I prioritized user experience and accessibility, ensuring intuitive navigation and fast load times for media-rich content.',
 		link: 'https://readerx.vercel.app',
 		github: 'https://github.com/invalid8/manga-reader-frontend-beta',
 		role: 'Frontend Developer',
@@ -106,11 +93,12 @@ export const projects: Project[] = [
 		type: 'challenge'
 	},
 	{
+		id: 8,
 		thumbnail: 'https://placehold.co/800x600/20C997/FFFFFF?text=Tacky+Fruits',
 		title: 'Tacky Fruits',
 		description: 'A colorful showcase of fruits with quirky and engaging designs.',
-		content: 'An experimental project focused on vibrant animations and creative illustrations.',
-
+		content:
+			'## Overview\nTacky Fruits is a playful project designed to experiment with animation and creative illustrations. It combines artistic design with interactive elements to create an engaging user experience.\n\n### Features\n- **Vibrant Animations:** Brings fruits to life with creative motion effects.\n- **Interactive Elements:** Allows users to interact with the designs through clicks and hover actions.\n- **Custom Illustrations:** Unique, hand-drawn fruit designs that stand out.\n\n### Purpose\nThis project was an exercise in pushing the boundaries of CSS and JavaScript animations, while also exploring design-driven development.',
 		link: 'https://tackyfruits.vercel.app',
 		github: 'https://github.com/invalid8/tacky-fruits',
 		role: 'Sole Developer',
@@ -118,11 +106,12 @@ export const projects: Project[] = [
 		type: 'challenge'
 	},
 	{
+		id: 9,
 		thumbnail: 'https://placehold.co/800x600/007BFF/FFFFFF?text=Web+Portfolio',
 		title: 'Web Portfolio',
 		description: 'A personal web portfolio showcasing my skills and projects using Svelte.',
 		content:
-			'This portfolio highlights my web development journey and integrates animations and responsive designs.',
+			'## Overview\nThis portfolio showcases my journey as a web developer, featuring projects, skills, and testimonials. Built with Svelte, it highlights my ability to create performant and visually appealing web applications.\n\n### Features\n- **Dynamic Project Showcase:** Interactive gallery for featured projects.\n- **Testimonial Section:** Client feedback displayed with smooth animations.\n- **Responsive Layout:** Optimized for devices of all sizes.\n\n### Development Process\nI focused on minimalism and responsiveness, ensuring the portfolio reflects both creativity and professionalism. Animations were carefully designed to enhance user engagement without compromising performance.',
 		link: 'https://fullstack-svelte-portfolio.vercel.app',
 		github: 'https://github.com/invalid8/web-portfolio',
 		role: 'Sole Developer',
