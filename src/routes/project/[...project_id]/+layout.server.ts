@@ -1,7 +1,7 @@
 import {projects} from '$data/projects';
 import {toSlug} from '$lib/common';
 import type {Project} from '$type';
-import type {RequestEvent} from '@sveltejs/kit';
+import {error, type RequestEvent} from '@sveltejs/kit';
 
 export async function load({url}: RequestEvent) {
 	const {pathname} = url;
@@ -9,6 +9,8 @@ export async function load({url}: RequestEvent) {
 	const project: Project | undefined = projects.find(
 		(x) => toSlug(x.title) === pathname.replace('/project/', '')
 	);
+
+	if (!project) error(404, 'Project Not Found');
 
 	return {
 		slug: pathname.replace('/project/', ''),

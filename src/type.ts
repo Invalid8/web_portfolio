@@ -1,3 +1,5 @@
+import type {User, UserInfo} from 'firebase/auth';
+
 export type Project = {
 	id: string | number;
 	thumbnail: string;
@@ -13,7 +15,7 @@ export type Project = {
 };
 
 export type Skill = {
-	id: number;
+	id: number | string;
 	key: string;
 	value: string;
 	skillLevel: number;
@@ -23,7 +25,7 @@ export type Skill = {
 };
 
 export type Experience = {
-	id: number;
+	id: number | string;
 	position: {
 		title: string;
 		role: string;
@@ -35,5 +37,35 @@ export type Experience = {
 		link: string;
 		logo: string;
 	};
-	skills: string[];
+	skills: Skill[];
+};
+
+export interface Bio {
+	id: string;
+	fullName: string;
+	title: string; // For example: 'Software Developer', 'Full Stack Developer'
+	aboutMe: string;
+	contactEmail: string;
+	phoneNumber?: string;
+	createdAt: FirebaseFirestore.Timestamp;
+}
+
+export interface UserProfile extends User {
+	role: string;
+}
+
+export type LocalUser = {
+	uid: string;
+	email: string;
+	displayName: string;
+	photoURL: string;
+};
+
+type Optional<T> = T | undefined | null;
+
+export type UserType = {
+	displayName: Optional<string>;
+	photoURL: Optional<string>;
+	uid: string;
+	email: Optional<string>;
 };

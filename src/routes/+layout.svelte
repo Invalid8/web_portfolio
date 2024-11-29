@@ -7,14 +7,21 @@
 	import ThemeToggle from '$components/ThemeToggle.svelte';
 	import Contact from '$components/Contact.svelte';
 	import AOS from 'aos';
-	import type {UserType} from '@kinde-oss/kinde-auth-sveltekit';
-	import {onMount} from 'svelte';
 
-	export let data: {isAuthentication: boolean; userProfile: UserType};
+	import {onMount} from 'svelte';
+	import type {UserProfile} from '$type';
+
+	import {page} from '$app/stores';
+	export let data: {isAuthentication: boolean; user: UserProfile};
+	const exemptPaths = ['/auth', '/admin'];
 
 	onMount(() => {
 		AOS.init();
 	});
+
+	function isExempted() {
+		return exemptPaths.some((path) => $page.url.pathname.startsWith(path));
+	}
 </script>
 
 <svelte:head>
@@ -22,14 +29,21 @@
 </svelte:head>
 
 <div class="wrapper relative">
-	<Header isAuthenticated={data.isAuthentication} user={data.userProfile} />
+	{#if !isExempted()}
+		<Header isAuthenticated={data.isAuthentication} user={data.user} />
+	{/if}
 
-	<slot />
+	<div class="content-x min-h-[calc(100svh_-_80px)]">
+		<slot />
+	</div>
 
-	<br />
-	<hr />
 	<!-- Lets Connect -->
-	<Contact />
-	<Footer />
+	{#if !isExempted()}
+		<br />
+		<br />
+		<hr />
+		<Contact />
+		<Footer />
+	{/if}
 	<ThemeToggle />
 </div>

@@ -14,13 +14,7 @@ export const experiences: Experience[] = [
 			link: '',
 			logo: '/path-to-logo/integrity-ventures-logo.png' // Replace with the actual logo URL if available
 		},
-		skills: [
-			'TypeScript',
-			'Tailwind CSS',
-			'Performance Optimization',
-			'Responsive Design',
-			'State Management'
-		]
+		skills: []
 	},
 	{
 		id: 2,
@@ -35,13 +29,7 @@ export const experiences: Experience[] = [
 			link: 'https://www.upwork.com',
 			logo: '/path-to-logo/upwork-logo.png' // Replace with the actual logo URL if available
 		},
-		skills: [
-			'React',
-			'SEO Optimization',
-			'E-commerce Development',
-			'Single-page Applications',
-			'Client Communication'
-		]
+		skills: []
 	},
 	{
 		id: 3,
@@ -56,7 +44,7 @@ export const experiences: Experience[] = [
 			link: '',
 			logo: '/path-to-logo/hynitr-logo.png' // Replace with the actual logo URL if available
 		},
-		skills: ['React', 'TypeScript', 'Git Workflows', 'Code Reviews', 'UI/UX Enhancement']
+		skills: []
 	},
 	{
 		id: 4,
@@ -71,6 +59,6 @@ export const experiences: Experience[] = [
 			link: 'https://thegigs.co',
 			logo: '/path-to-logo/thegigs-logo.png' // Replace with the actual logo URL if available
 		},
-		skills: ['Vue', 'TypeScript', 'Tailwind CSS', 'Responsive Design']
+		skills: []
 	}
 ];

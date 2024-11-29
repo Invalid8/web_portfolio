@@ -43,3 +43,8 @@ export function goBack() {
 		goto('/');
 	}
 }
+
+export const keys = {
+	token: 'X_TOKEN',
+	auth_access: 'auc'
+};

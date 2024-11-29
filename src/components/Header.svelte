@@ -2,10 +2,10 @@
 	import {page} from '$app/stores';
 	import {AppInfo} from '$lib/common';
 	import {cn} from '$lib/utils';
-	import type {UserType} from '@kinde-oss/kinde-auth-sveltekit';
+	import type {UserProfile} from '$type';
 	import {LucideMenuSquare, LucideX} from 'lucide-svelte';
 
-	let {user, isAuthenticated} = $props<{user: UserType | null; isAuthenticated: boolean}>();
+	let {user, isAuthenticated} = $props<{user: UserProfile | null; isAuthenticated: boolean}>();
 	let menuIsOpen = $state<boolean>(false);
 
 	console.log(user, isAuthenticated);
@@ -81,7 +81,6 @@
 			class="sm:hidden block"
 			onclick={() => {
 				menuIsOpen = !menuIsOpen;
-				console.log('object');
 			}}
 		>
 			<LucideMenuSquare size="42" />

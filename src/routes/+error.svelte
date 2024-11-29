@@ -1,7 +1,8 @@
 <script>
 	import {page} from '$app/stores';
 	import SpaceCat from '$components/SpaceCat.svelte';
-	import {HomeIcon} from 'lucide-svelte';
+	import {goBack} from '$lib/common';
+	import {ArrowLeft} from 'lucide-svelte';
 </script>
 
 <div
@@ -13,12 +14,12 @@
 			{$page?.error?.message || 'An Unexpected Error Occurred'}
 		</h1>
 		<div class="btn-container mx-auto">
-			<a
-				href="/"
+			<button
+				onclick={goBack}
 				class="rounded-md px-3 py-2 bg-primary text-black font-medium flex gap-2 justify-center items-center"
 			>
-				<HomeIcon size="16" /> Home
-			</a>
+				<ArrowLeft size="16" /> Back
+			</button>
 		</div>
 	</div>
 </div>

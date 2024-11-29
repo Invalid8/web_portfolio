@@ -54,6 +54,32 @@ This portfolio was designed for developers who want to showcase their work while
 
 6. **Access the Admin Dashboard:** Navigate to `/admin` after logging in to manage your portfolio.
 
+7. **ENV:**
+
+   ```bash
+   PUBLIC_AUTH_ACCESS=""
+
+   PUBLIC_API_KEY=""
+   PUBLIC_AUTH_DOMAIN=""
+   PUBLIC_PROJECT_ID=""
+   PUBLIC_STORAGE_BUCKET=""
+   PUBLIC_MESSAGING_SENDER_ID=""
+   PUBLIC_APP_ID=""
+   PUBLIC_MEASUREMENT_ID=""
+
+   FIREBASE_ADMIN_type=""
+   FIREBASE_ADMIN_project_id=""
+   FIREBASE_ADMIN_private_key_id=""
+   FIREBASE_ADMIN_private_key=""
+   FIREBASE_ADMIN_client_email=""
+   FIREBASE_ADMIN_client_id=""
+   FIREBASE_ADMIN_auth_uri=""
+   FIREBASE_ADMIN_token_uri=""
+   FIREBASE_ADMIN_auth_provider_x509_cert_url=""
+   FIREBASE_ADMIN_client_x509_cert_url=""
+   FIREBASE_ADMIN_universe_domain=""
+   ```
+
 ## Future Enhancements
 
 - **Multi-User Support:** Enable multiple roles for collaborators.

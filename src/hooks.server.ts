@@ -1,7 +1,24 @@
-import {sessionHooks, type Handler} from '@kinde-oss/kinde-auth-sveltekit';
+import {COOKIE_NAME} from '$lib/firebase/firebase-admin';
+import {getFirebaseSession} from '$lib/firebase/session';
+import type {Handle} from '@sveltejs/kit';
 
-export const handle: Handler = async ({event, resolve}) => {
-	sessionHooks({event});
-	const response = await resolve(event);
-	return response;
+export const handle: Handle = async ({event, resolve}) => {
+	event.locals.getSession = async () => {
+		const sessionCookie = event.cookies.get(COOKIE_NAME);
+
+		if (!sessionCookie) {
+			return null;
+		}
+
+		const {error, decodedClaims} = await getFirebaseSession(sessionCookie);
+
+		if (error) {
+			console.error(error);
+			return null;
+		}
+
+		return decodedClaims;
+	};
+
+	return resolve(event);
 };
