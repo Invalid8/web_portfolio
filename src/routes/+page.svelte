@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{AppInfo.title} | Home</title>
+	<title>{AppInfo.title}</title>
 </svelte:head>
 
 <main>
