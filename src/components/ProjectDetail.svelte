@@ -27,7 +27,7 @@
 				alt={project.title}
 				width={1024}
 				height={1024 / 1.5}
-				class="text-center object-cover size-full aspect-video sm:aspect-[9/4]"
+				class="text-center object-cover object-top size-full aspect-video sm:aspect-[9/4]"
 			/>
 		</div>
 		<div class="he_ my-6 space-y-1">

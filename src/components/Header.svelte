@@ -42,7 +42,7 @@
 		<li>
 			<a
 				class={cn(
-					'font-semibold hover:underline text-xl md:text-base rounded-full px-3 py-2 bg-primary text-primary-foreground',
+					'font-semibold text-xl hover:opacity-80 md:text-base rounded-full px-3 py-2 bg-primary text-primary-foreground',
 					$page?.url.hash.includes('/Contact') && 'text-primary underline'
 				)}
 				onclick={() => (menuIsOpen = false)}

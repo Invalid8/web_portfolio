@@ -19,7 +19,11 @@
 			{project.type}
 		</div>
 		<div class="img-box aspect-[10/6] bg-black rounded-md overflow-hidden">
-			<img src={project.thumbnail} alt={project.title} class="object-cover w-full h-full" />
+			<img
+				src={project.thumbnail}
+				alt={project.title}
+				class="object-cover object-top w-full h-full"
+			/>
 		</div>
 		<a
 			href="/project/{toSlug(project.title)}"

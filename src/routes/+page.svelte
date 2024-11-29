@@ -12,9 +12,9 @@
 
 <main>
 	<div
-		class="banner flex md:flex-row flex-col flex-wrap justify-center items-center h-full sm:min-h-[calc(100vh_-_70px)] sm:p-8 p-6 pt-2 sm:gap-8 gap-4"
+		class="banner flex md:flex-row flex-col flex-wrap justify-center items-center h-full min-h-[calc(100vh_-_70px)] sm:p-8 p-6 pt-2 sm:gap-8 gap-4"
 	>
-		<div class="box grid gap-4 lg:basis-1/2">
+		<div class="box grid gap-4 max-w-2xl">
 			<h1 class="lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold uppercase">
 				<span class="tracking-wide">Hi, I am</span> <br />
 				<span data-site="name">{SiteData.name}</span>.
@@ -87,7 +87,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="box grid place-items-center md:basis-1/4 aspect-auto">
+		<div class="box grid place-items-center md:basis-1/4">
 			<Astronaut />
 		</div>
 	</div>

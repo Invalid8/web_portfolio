@@ -3,7 +3,13 @@ import type {Project} from '$type';
 export const projects: Project[] = [
 	{
 		id: '1',
-		thumbnail: 'https://placehold.co/800x600/6C757D/FFFFFF?text=Pollproxy',
+		thumbnail: '/images/pollproxy.png',
+		medias: [
+			{
+				link: 'https://placehold.co/800x400/6C757D/FFFFFF?text=Pollproxy',
+				type: 'image'
+			}
+		],
 		title: 'Pollproxy',
 		description: 'A Svelte-based polling application for quick and interactive polls.',
 		content:
@@ -16,7 +22,13 @@ export const projects: Project[] = [
 	},
 	{
 		id: '2',
-		thumbnail: 'https://placehold.co/800x600/6F42C1/FFFFFF?text=Haza+Wallet',
+		thumbnail: '/images/haza-wallet.png',
+		medias: [
+			{
+				link: 'https://placehold.co/800x400/6F42C1/FFFFFF?text=Haza+Wallet',
+				type: 'image'
+			}
+		],
 		title: 'Haza Wallet',
 		description: 'A dashboard application for managing payments and financial data.',
 		content:
@@ -27,35 +39,43 @@ export const projects: Project[] = [
 		date: '2024-05-15',
 		type: 'contract'
 	},
-	{
-		id: '3',
-		thumbnail: 'https://placehold.co/800x600/DC3545/FFFFFF?text=Fullstack+Portfolio',
-		title: 'Fullstack Portfolio',
-		description: 'A comprehensive full-stack portfolio showcasing diverse projects and skills.',
-		content:
-			'### About Fullstack Portfolio\nThis portfolio is a testament to my full-stack development skills, built with cutting-edge tools like **Next.js** and **React.js**.\n\n#### Features:\n- **Dynamic Projects Page**: Fetches live data about my work from an external API.\n- **Authentication**: User login system implemented using **NextAuth**.\n- **Server-side Rendering**: Ensures fast load times and SEO optimization.\n\n#### My Role:\nAs a **Fullstack Developer**, I:\n- Designed and implemented API integrations to display projects dynamically.\n- Leveraged server-side rendering for better performance.\n- Focused on modular and reusable component design.',
-		link: 'https://dantolu33.vercel.app',
-		github: 'https://github.com/invalid8/fullstack_portfolio',
-		role: 'Fullstack Developer',
-		date: '2024-06-05',
-		type: 'freelance'
-	},
+	// {
+	// 	id: '3',
+	// 	thumbnail: 'https://placehold.co/800x400/DC3545/FFFFFF?text=Fullstack+Portfolio',
+	// 	medias: [],
+	// 	title: 'Fullstack Portfolio',
+	// 	description: 'A comprehensive full-stack portfolio showcasing diverse projects and skills.',
+	// 	content:
+	// 		'### About Fullstack Portfolio\nThis portfolio is a testament to my full-stack development skills, built with cutting-edge tools like **Next.js** and **React.js**.\n\n#### Features:\n- **Dynamic Projects Page**: Fetches live data about my work from an external API.\n- **Authentication**: User login system implemented using **NextAuth**.\n- **Server-side Rendering**: Ensures fast load times and SEO optimization.\n\n#### My Role:\nAs a **Fullstack Developer**, I:\n- Designed and implemented API integrations to display projects dynamically.\n- Leveraged server-side rendering for better performance.\n- Focused on modular and reusable component design.',
+	// 	link: 'https://dantolu33.vercel.app',
+	// 	github: 'https://github.com/invalid8/fullstack_portfolio',
+	// 	role: 'Fullstack Developer',
+	// 	date: '2024-06-05',
+	// 	type: 'freelance'
+	// },
 	{
 		id: '4',
-		thumbnail: 'https://placehold.co/800x600/FFC107/000000?text=Campus+Talks',
+		thumbnail: '/images/campus-talks.png',
+		medias: [
+			{
+				link: 'https://placehold.co/800x400/FFC107/000000?text=Campus+Talks',
+				type: 'image'
+			}
+		],
 		title: 'Campus Talks',
 		description: 'A platform for hosting and sharing educational talks and events.',
 		content:
 			'### About Campus Talks\nCampus Talks is an interactive platform designed to bridge the gap between educators and students by hosting and sharing educational talks and events.\n\n#### Features:\n- **Event Scheduling**: Organize talks with specific dates and times.\n- **Live Sessions**: Support for hosting live interactive talks.\n- **Community Engagement**: Tools for questions and discussions during events.\n\n#### My Role:\nAs the **Lead Developer**, I:\n- Oversaw the entire development process from design to deployment.\n- Built scalable REST APIs to support real-time functionality.\n- Optimized the app for low-latency live streaming.',
 		link: 'https://campus-talks.vercel.app',
-		github: 'https://github.com/invalid8/campus-talks',
-		role: 'Lead Developer',
+		github: '',
+		role: 'Fullstack Developer',
 		date: '2024-05-01',
-		type: 'freelance'
+		type: 'hackathon'
 	},
 	{
 		id: '5',
-		thumbnail: 'https://placehold.co/800x600/343A40/FFFFFF?text=How+to+Center+a+Div',
+		thumbnail: 'https://placehold.co/800x400/343A40/FFFFFF?text=How+to+Center+a+Div',
+		medias: [],
 		title: 'How to Center a Div',
 		description: 'A simple guide application demonstrating various ways to center a div.',
 		content:
@@ -68,7 +88,13 @@ export const projects: Project[] = [
 	},
 	{
 		id: '6',
-		thumbnail: 'https://placehold.co/800x600/6F42C1/FFFFFF?text=Turbo+Analytics',
+		thumbnail: '/images/turbo.png',
+		medias: [
+			{
+				link: 'https://placehold.co/800x400/6F42C1/FFFFFF?text=Turbo+Analytics',
+				type: 'image'
+			}
+		],
 		title: 'Turbo Analytics',
 		description: 'A lightweight analytics dashboard for monitoring data metrics.',
 		content:
@@ -81,40 +107,58 @@ export const projects: Project[] = [
 	},
 	{
 		id: 7,
-		thumbnail: 'https://placehold.co/800x600/FD7E14/FFFFFF?text=Reader+X',
+		thumbnail: '/images/reader-x.png',
+		medias: [
+			{
+				link: 'https://placehold.co/800x400/FD7E14/FFFFFF?text=Reader+X',
+				type: 'image'
+			}
+		],
 		title: 'Reader X',
 		description: 'A frontend beta for a manga reading platform with search and display features.',
 		content:
 			'## Overview\nReader X is a beta platform catering to manga enthusiasts. It focuses on delivering a seamless reading experience with advanced search functionality and optimized layouts for various screen sizes.\n\n### Features\n- **Search Engine:** Instant search results for manga titles and authors.\n- **Responsive Reader:** Ensures a smooth reading experience on all devices.\n- **Bookmarking System:** Allows users to save their progress and favorite manga.\n\n### Contributions\nAs the frontend developer, I prioritized user experience and accessibility, ensuring intuitive navigation and fast load times for media-rich content.',
 		link: 'https://readerx.vercel.app',
-		github: 'https://github.com/invalid8/manga-reader-frontend-beta',
+		github: '',
 		role: 'Frontend Developer',
 		date: '2024-02-10',
 		type: 'challenge'
 	},
 	{
 		id: 8,
-		thumbnail: 'https://placehold.co/800x600/20C997/FFFFFF?text=Tacky+Fruits',
+		thumbnail: '/images/tacky.png',
+		medias: [
+			{
+				link: 'https://placehold.co/800x400/20C997/FFFFFF?text=Tacky+Fruits',
+				type: 'image'
+			}
+		],
 		title: 'Tacky Fruits',
 		description: 'A colorful showcase of fruits with quirky and engaging designs.',
 		content:
 			'## Overview\nTacky Fruits is a playful project designed to experiment with animation and creative illustrations. It combines artistic design with interactive elements to create an engaging user experience.\n\n### Features\n- **Vibrant Animations:** Brings fruits to life with creative motion effects.\n- **Interactive Elements:** Allows users to interact with the designs through clicks and hover actions.\n- **Custom Illustrations:** Unique, hand-drawn fruit designs that stand out.\n\n### Purpose\nThis project was an exercise in pushing the boundaries of CSS and JavaScript animations, while also exploring design-driven development.',
 		link: 'https://tackyfruits.vercel.app',
-		github: 'https://github.com/invalid8/tacky-fruits',
-		role: 'Sole Developer',
+		github: '',
+		role: 'Fullstack Developer',
 		date: '2024-01-25',
 		type: 'challenge'
 	},
 	{
 		id: 9,
-		thumbnail: 'https://placehold.co/800x600/007BFF/FFFFFF?text=Web+Portfolio',
+		thumbnail: '/page0.png',
+		medias: [
+			{
+				link: 'https://placehold.co/800x400/007BFF/FFFFFF?text=Web+Portfolio',
+				type: 'image'
+			}
+		],
 		title: 'Web Portfolio',
 		description: 'A personal web portfolio showcasing my skills and projects using Svelte.',
 		content:
 			'## Overview\nThis portfolio showcases my journey as a web developer, featuring projects, skills, and testimonials. Built with Svelte, it highlights my ability to create performant and visually appealing web applications.\n\n### Features\n- **Dynamic Project Showcase:** Interactive gallery for featured projects.\n- **Testimonial Section:** Client feedback displayed with smooth animations.\n- **Responsive Layout:** Optimized for devices of all sizes.\n\n### Development Process\nI focused on minimalism and responsiveness, ensuring the portfolio reflects both creativity and professionalism. Animations were carefully designed to enhance user engagement without compromising performance.',
 		link: 'https://fullstack-svelte-portfolio.vercel.app',
-		github: 'https://github.com/invalid8/web-portfolio',
-		role: 'Sole Developer',
+		github: 'https://github.com/Invalid8/web_portfolio',
+		role: 'Web Developer',
 		date: '2024-07-01',
 		type: 'freelance'
 	}

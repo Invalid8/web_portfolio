@@ -1,6 +1,7 @@
 export type Project = {
 	id: string | number;
 	thumbnail: string;
+	medias: {link: string; type: 'image' | 'video'}[];
 	title: string;
 	description: string;
 	content?: string;
