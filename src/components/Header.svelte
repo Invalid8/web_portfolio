@@ -1,14 +1,14 @@
 <script lang="ts">
 	import {page} from '$app/stores';
 	import {AppInfo} from '$lib/common';
-	import {cn} from '$lib/utils';
-	import type {UserProfile} from '$type';
+	import {cn} from '$lib/utils/index';
+	import type {UserType} from '$type';
 	import {LucideMenuSquare, LucideX} from 'lucide-svelte';
+	import AvatarDrop from './ui/AvatarDrop.svelte';
 
-	let {user, isAuthenticated} = $props<{user: UserProfile | null; isAuthenticated: boolean}>();
+	let {user, isAuthenticated}: {user: UserType | null; isAuthenticated: boolean} = $props();
+
 	let menuIsOpen = $state<boolean>(false);
-
-	console.log(user, isAuthenticated);
 </script>
 
 {#snippet links()}
@@ -49,10 +49,15 @@
 				href="#Contact">Contact Me</a
 			>
 		</li>
+		{#if isAuthenticated && user}
+			<li>
+				<AvatarDrop {user} />
+			</li>
+		{/if}
 	</ul>
 {/snippet}
 
-<header class="h-[70px] sticky top-0 left-0 right-0 z-20 bg-background">
+<header class="h-[70px] sticky top-0 left-0 right-0 z-20 bg-background w-full">
 	<nav
 		class="nav px-[1.5rem] md:px-[3rem] ld:px-[6rem] container max-w-screen-xl md:mx-auto items-center w-full"
 	>
@@ -85,24 +90,17 @@
 		>
 			<LucideMenuSquare size="42" />
 		</button>
-		<!-- {#if isAuthenticated}
-			<div class="profile-blob">
-				<div class="avatar">
-					{user?.given_name}
-				</div>
-				<div>
-					<p class="text-heading-2 text-capitalize">
-						{user?.given_name}
-						{user?.family_name}
-					</p>
-					<a class="text-subtle" href="/api/auth/logout"> Sign out </a>
-				</div>
-			</div>
-		{:else}
-			<div>
-				<a class="btn btn-ghost sign-in-btn" href="/api/auth/login"> Sign in </a>
-				<a class="btn btn-dark" href="/api/auth/register"> Sign up </a>
-			</div>
-		{/if} -->
 	</nav>
 </header>
+
+<style scoped>
+	.nav {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 2rem;
+		padding-top: 2rem;
+		width: 100%;
+		height: 75px;
+	}
+</style>

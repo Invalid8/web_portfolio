@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
-	fetchSignInMethodsForEmail,
+	AuthErrorCodes,
 	GoogleAuthProvider,
 	onIdTokenChanged,
 	signInWithEmailAndPassword,
 	signInWithPopup,
 	signOut,
+	// updatePassword,
 	type User
 } from 'firebase/auth';
 import {readable, type Subscriber} from 'svelte/store';
@@ -13,23 +15,43 @@ import {type ActionResult} from '@sveltejs/kit';
 import {applyAction, deserialize} from '$app/forms';
 import type {UserType} from '$type';
 import {useSharedStore} from '$lib/use-shared';
+import {goto} from '$app/navigation';
 import {auth} from './clientApp';
-import {errorMsg} from '$store';
 
 export async function loginWithGoogle(event: Event) {
 	event.preventDefault();
 
 	const form = event.target as HTMLFormElement;
 
-	const credential = await signInWithPopup(auth, new GoogleAuthProvider());
+	let credential;
+
+	try {
+		credential = await signInWithPopup(auth, new GoogleAuthProvider());
+	} catch (error: any) {
+		let msg = 'Something unexpected occurred!';
+
+		if ([AuthErrorCodes.ADMIN_ONLY_OPERATION].includes(error.code)) {
+			msg = 'Admin only operation';
+		}
+
+		goto(`/api/auth?message=${msg}`, {
+			replaceState: true,
+			state: {message: msg},
+			invalidateAll: true
+		});
+		return;
+	}
 	const user = credential.user;
 
-	// Verify if the account already exists
-	const signInMethods = await fetchSignInMethodsForEmail(auth, user.email ?? '');
-
-	if (signInMethods.length === 0) {
-		throw new Error('No account found for this email. Please contact support.');
-	}
+	// TODO: use this to set up your account password
+	// updatePassword(user, 'some-password')
+	// 	.then(() => {
+	// 		// Update successful.
+	// 	})
+	// 	.catch((error) => {
+	// 		console.log(error);
+	// 		// ...
+	// 	});
 
 	// Get the ID token
 	const idToken = await user.getIdToken();
@@ -49,7 +71,6 @@ export async function loginWithGoogle(event: Event) {
 		case 'error':
 			applyAction(result);
 			console.error(result.error);
-			errorMsg.update(result.error.message);
 			break;
 		case 'redirect':
 			applyAction(result);
@@ -66,7 +87,31 @@ export async function loginWithEmailAndPassword(event: Event) {
 	const email = formData.get('email') as string;
 	const password = formData.get('password') as string;
 
-	const credential = await signInWithEmailAndPassword(auth, email, password);
+	let credential;
+
+	try {
+		credential = await signInWithEmailAndPassword(auth, email, password);
+	} catch (error: any) {
+		let msg = 'Something unexpected occurred!';
+		if (
+			[
+				AuthErrorCodes.INVALID_PASSWORD,
+				AuthErrorCodes.INVALID_EMAIL,
+				AuthErrorCodes.USER_DELETED
+			].includes(error.code)
+		) {
+			msg = 'The email address or password is incorrect';
+		}
+
+		goto(`/api/auth?message=${msg}`, {
+			replaceState: true,
+			state: {message: msg},
+			invalidateAll: true
+		});
+		return;
+	}
+
+	if (!credential) return;
 
 	// Get the ID token
 	const idToken = await credential.user.getIdToken();
@@ -85,7 +130,6 @@ export async function loginWithEmailAndPassword(event: Event) {
 	// Handle response
 	switch (result.type) {
 		case 'error':
-			errorMsg.update(result.error.message);
 			applyAction(result);
 			console.error(result.error);
 			break;

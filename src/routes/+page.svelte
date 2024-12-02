@@ -146,7 +146,7 @@
 	</section>
 </main>
 
-<style scoped>
+<style scoped lang="postcss">
 	.cn-btn {
 		.dot {
 			.icon {

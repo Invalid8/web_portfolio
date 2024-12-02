@@ -1,4 +1,4 @@
-import {error, redirect, type Actions} from '@sveltejs/kit';
+import {redirect, type Actions, type RequestEvent} from '@sveltejs/kit';
 import {createFirebaseSession} from '$lib/firebase/session';
 import {COOKIE_NAME} from '$lib/firebase/firebase-admin';
 
@@ -16,13 +16,13 @@ export const actions = {
 		const idToken = form.get('idToken');
 
 		if (!idToken || typeof idToken !== 'string') {
-			error(401, 'Unauthorized request!');
+			redirect(303, '/api/auth?message=Unauthorized request!');
 		}
 
 		const {sessionCookie, options, error: firebase_error} = await createFirebaseSession(idToken);
 
 		if (firebase_error) {
-			error(firebase_error.status, firebase_error.message);
+			redirect(firebase_error.status, firebase_error.message);
 		}
 
 		// set generated session cookie
@@ -32,3 +32,15 @@ export const actions = {
 		redirect(303, '/');
 	}
 } satisfies Actions;
+
+export const load = async ({locals: {getSession}, url}: RequestEvent) => {
+	const session = await getSession();
+
+	if (session) {
+		redirect(302, '/admin');
+	}
+
+	return {
+		message: url.searchParams.get('message')
+	};
+};

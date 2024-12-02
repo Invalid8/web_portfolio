@@ -1,5 +1,3 @@
-import type {User, UserInfo} from 'firebase/auth';
-
 export type Project = {
 	id: string | number;
 	thumbnail: string;
@@ -42,24 +40,19 @@ export type Experience = {
 
 export interface Bio {
 	id: string;
-	fullName: string;
-	title: string; // For example: 'Software Developer', 'Full Stack Developer'
-	aboutMe: string;
-	contactEmail: string;
-	phoneNumber?: string;
-	createdAt: FirebaseFirestore.Timestamp;
+	name: string;
+	username: string;
+	about: {
+		summary: string;
+		fullDetails: string;
+	};
+	description: string;
+	links: {
+		github: string;
+		linkedin: string;
+		resume: string;
+	};
 }
-
-export interface UserProfile extends User {
-	role: string;
-}
-
-export type LocalUser = {
-	uid: string;
-	email: string;
-	displayName: string;
-	photoURL: string;
-};
 
 type Optional<T> = T | undefined | null;
 

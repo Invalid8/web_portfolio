@@ -48,3 +48,13 @@ export const keys = {
 	token: 'X_TOKEN',
 	auth_access: 'auc'
 };
+
+export function capFirst(value: string) {
+	return `${value.charAt(0).toUpperCase()}${value.slice(1)}`;
+}
+
+export const exemptPaths = ['/admin', '/api'];
+
+export function isExempted(pathname: string) {
+	return exemptPaths.some((path) => pathname.startsWith(path));
+}

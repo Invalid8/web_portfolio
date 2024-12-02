@@ -2,7 +2,7 @@
 	import {experiences} from '$data/experiences';
 	import {skills} from '$data/skills';
 	import {AppInfo} from '$lib/common';
-	import {cn} from '$lib/utils';
+	import {cn} from '$lib/utils/index';
 	import {ArrowUpRight} from 'lucide-svelte';
 </script>
 
@@ -138,7 +138,7 @@
 	</section>
 </main>
 
-<style scoped>
+<style scoped lang="postcss">
 	.cn-btn {
 		.dot {
 			.icon {

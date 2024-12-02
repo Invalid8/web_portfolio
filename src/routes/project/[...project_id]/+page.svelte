@@ -1,14 +1,15 @@
 <script lang="ts">
-	import {AppInfo, goBack} from '$lib/common';
+	import {AppInfo} from '$lib/common';
 	import Loader from '$components/Loader.svelte';
 	import {beforeNavigate, afterNavigate} from '$app/navigation';
 	import {fade} from 'svelte/transition';
-	import {cn} from '$lib/utils';
+	import {cn} from '$lib/utils/index';
 	import type {Project} from '$type';
 	import ProjectDetail from '$components/ProjectDetail.svelte';
+	import {page} from '$app/stores';
 
 	let isLoading = $state<boolean>(false);
-	const {data}: {data: {slug: String; project: Project}} = $props();
+	const {data}: {data: {project: Project}} = $props();
 
 	beforeNavigate(() => (isLoading = true));
 	afterNavigate(() => (isLoading = false));
@@ -26,13 +27,13 @@
 		<meta property="og:site_name" content={data.project.title} />
 		<meta property="og:title" content={data.project.title} />
 		<meta property="og:description" content={data.project.description} />
-		<meta property="og:url" content="{AppInfo.url}/project/{data.slug}" />
+		<meta property="og:url" content="{AppInfo.url}/project/{$page.params.project_id}" />
 	{:else}
 		<title>Not Found | {AppInfo.title}</title>
 	{/if}
 </svelte:head>
 
-{#key data.slug}
+{#key data.project}
 	<div
 		in:fade={{duration: 300, delay: 400}}
 		out:fade={{duration: 300}}

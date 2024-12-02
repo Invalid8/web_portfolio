@@ -3,25 +3,22 @@
 	import 'aos/dist/aos.css';
 	import Footer from '$components/Footer.svelte';
 	import Header from '$components/Header.svelte';
-	import {AppInfo} from '$lib/common';
+	import {AppInfo, isExempted} from '$lib/common';
 	import ThemeToggle from '$components/ThemeToggle.svelte';
 	import Contact from '$components/Contact.svelte';
 	import AOS from 'aos';
+	import {ToastContainer, FlatToast} from 'svelte-toasts';
 
 	import {onMount} from 'svelte';
-	import type {UserProfile} from '$type';
 
 	import {page} from '$app/stores';
-	export let data: {isAuthentication: boolean; user: UserProfile};
-	const exemptPaths = ['/auth', '/admin'];
+	import type {PageData} from './$types';
+
+	const {data, children}: {data: PageData; children: () => any} = $props();
 
 	onMount(() => {
 		AOS.init();
 	});
-
-	function isExempted() {
-		return exemptPaths.some((path) => $page.url.pathname.startsWith(path));
-	}
 </script>
 
 <svelte:head>
@@ -29,16 +26,20 @@
 </svelte:head>
 
 <div class="wrapper relative">
-	{#if !isExempted()}
-		<Header isAuthenticated={data.isAuthentication} user={data.user} />
+	{#if !isExempted($page.url.pathname)}
+		<Header isAuthenticated={data.isAuthentication} user={data?.user} />
 	{/if}
 
-	<div class="content-x min-h-[calc(100svh_-_80px)]">
-		<slot />
-	</div>
+	{#if !isExempted($page.url.pathname)}
+		<div class="content-x min-h-[calc(100svh_-_75px)]">
+			{@render children()}
+		</div>
+	{:else}
+		{@render children()}
+	{/if}
 
 	<!-- Lets Connect -->
-	{#if !isExempted()}
+	{#if !isExempted($page.url.pathname)}
 		<br />
 		<br />
 		<hr />
@@ -46,4 +47,7 @@
 		<Footer />
 	{/if}
 	<ThemeToggle />
+	<ToastContainer let:data>
+		<FlatToast {data} />
+	</ToastContainer>
 </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import {AppInfo} from '$lib/common';
-	import {cn} from '$lib/utils';
+	import {cn} from '$lib/utils/index';
 
 	let isDirty = $state<boolean>(false);
 	let sending = $state<boolean>(false);
@@ -42,7 +42,7 @@
 </script>
 
 <section
-	class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12 mx-auto max-w-screen-lg"
+	class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12 mx-auto max-w-screen-lg place-content-center"
 	id="Contact"
 >
 	<div class="he_ space-y-2">
@@ -181,7 +181,7 @@
 	</form>
 </section>
 
-<style scoped>
+<style scoped lang="postcss">
 	input,
 	textarea {
 		@apply border-2;
