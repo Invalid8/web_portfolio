@@ -15,7 +15,7 @@
 		class="banner flex md:flex-row flex-col flex-wrap justify-center items-center h-full min-h-[calc(100vh_-_70px)] sm:p-8 p-6 pt-2 sm:gap-8 gap-4"
 	>
 		<div class="box grid gap-4 max-w-2xl">
-			<h1 class="lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold uppercase">
+			<h1 class="lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-bold uppercase font-Bebas">
 				<span class="tracking-wide">Hi, I am</span> <br />
 				<span data-site="name">{SiteData.name}</span>.
 			</h1>
@@ -97,7 +97,7 @@
 	<!-- Mini About me -->
 	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12">
 		<div class="he_ md:text-7xl text-4xl uppercase md:text-center">
-			<h2>About Me</h2>
+			<h2 class="font-Bebas">About Me</h2>
 		</div>
 		<div class="info space-y-4">
 			<p class="text-2xl font-medium">
@@ -126,7 +126,7 @@
 		id="Featured"
 	>
 		<div class="he_ max-w-xl">
-			<h2 class="sub-title text-4xl md:text-6xl">Featured Projects</h2>
+			<h2 class="sub-title text-4xl md:text-6xl font-Bebas">Featured Projects</h2>
 			<small class="text-subtext text-sm"
 				>Here are some of the selected projects that showcase my passion for front-end development.</small
 			>

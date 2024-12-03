@@ -15,7 +15,7 @@
 		id="Featured"
 	>
 		<div class="he_ max-w-xl">
-			<h2 class="sub-title text-4xl md:text-6xl">All Projects</h2>
+			<h2 class="text-4xl md:text-6xl font-Bebas">All Projects</h2>
 			<small class="text-subtext text-sm">
 				Here is a collection of projects that reflect my enthusiasm and expertise in web
 				development.

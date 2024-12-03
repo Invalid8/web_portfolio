@@ -13,7 +13,7 @@
 <main>
 	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 mb-12">
 		<div class="he_ md:text-7xl text-4xl uppercase md:text-center">
-			<h2>About Me</h2>
+			<h2 class="font-Bebas">About Me</h2>
 		</div>
 		<div class="info space-y-4">
 			<p class="text-2xl font-medium">
@@ -98,7 +98,7 @@
 	<!-- <hr /> -->
 	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12">
 		<div class="he_ md:text-7xl text-4xl uppercase md:text-center">
-			<h2>My Capabilities</h2>
+			<h2 class="font-Bebas">My Capabilities</h2>
 		</div>
 		<div class="info flex gap-4 flex-wrap">
 			{#each skills as skill}
@@ -119,7 +119,7 @@
 	<!-- <hr /> -->
 	<section class="sm:p-8 p-6 container grid md:grid-cols-2 grid-cols-1 gap-6 my-12">
 		<div class="he_ md:text-7xl text-4xl uppercase md:text-center">
-			<h2>My Experience</h2>
+			<h2 class="font-Bebas">My Experience</h2>
 		</div>
 		<div class="info space-y-6 max-w-2xl">
 			{#each experiences as experience}

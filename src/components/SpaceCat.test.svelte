@@ -1,5 +1,4 @@
 <script lang="ts">
-	import {browser} from '$app/environment';
 	import {onDestroy, onMount} from 'svelte';
 
 	let head: SVGGElement; // Reference to the head element
@@ -7,10 +6,6 @@
 	let body: SVGGElement; // Reference to the body element
 
 	function handleMouseMove(event: MouseEvent) {
-		if (!browser) {
-			return;
-		}
-
 		// Get the window dimensions
 		const pageWidth = window.innerWidth;
 		const pageHeight = window.innerHeight;
@@ -37,17 +32,11 @@
 
 	// Add the event listener to the document
 	onMount(() => {
-		if (!browser) {
-			return;
-		}
 		window.addEventListener('mousemove', handleMouseMove);
 	});
 
 	// Cleanup on unmount
 	onDestroy(() => {
-		if (!browser) {
-			return;
-		}
 		window.removeEventListener('mousemove', handleMouseMove);
 	});
 </script>

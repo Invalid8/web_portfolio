@@ -46,7 +46,7 @@
 	id="Contact"
 >
 	<div class="he_ space-y-2">
-		<h2 class="md:text-7xl text-4xl uppercase">Lets Connect</h2>
+		<h2 class="md:text-7xl text-4xl uppercase font-Bebas">Lets Connect</h2>
 		<p class="text-subtext">
 			Say hello at <a href="mailto:{AppInfo.contact.email}" class="border-b border-primary"
 				>{AppInfo.contact.email}</a
