@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.css';
+	import '../app.scss';
 	import 'aos/dist/aos.css';
 	import Footer from '$components/Footer.svelte';
 	import Header from '$components/Header.svelte';
@@ -31,7 +31,7 @@
 	{/if}
 
 	{#if !isExempted($page.url.pathname)}
-		<div class="content-x min-h-[calc(100svh_-_75px)]">
+		<div class="content-x min-h-[calc(100svh_-_75px)] relative">
 			{@render children()}
 		</div>
 	{:else}

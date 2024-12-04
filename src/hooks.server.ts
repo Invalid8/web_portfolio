@@ -1,6 +1,6 @@
 import {COOKIE_NAME} from '$lib/firebase/firebase-admin';
 import {getFirebaseSession} from '$lib/firebase/session';
-import type {Handle} from '@sveltejs/kit';
+import {type Handle, error} from '@sveltejs/kit';
 
 export const handle: Handle = async ({event, resolve}) => {
 	event.locals.getSession = async () => {
@@ -10,11 +10,11 @@ export const handle: Handle = async ({event, resolve}) => {
 			return null;
 		}
 
-		const {error, decodedClaims} = await getFirebaseSession(sessionCookie);
+		const {error: err, decodedClaims} = await getFirebaseSession(sessionCookie);
 
-		if (error) {
-			console.error(error);
-			return null;
+		if (err) {
+			console.error(err);
+			return error(err.status, err.message);
 		}
 
 		return decodedClaims;

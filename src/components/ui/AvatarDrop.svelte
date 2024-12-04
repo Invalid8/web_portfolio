@@ -29,10 +29,10 @@
 {#if $open}
 	<div class=" menu" use:melt={$menu} transition:fly={{duration: 150, y: -10}}>
 		<div class="item" use:melt={$item}><a href="/admin">Admin</a></div>
+		<div class="separator" use:melt={$separator}></div>
 		<div class="item !text-red-500" use:melt={$item}>
 			<Logout />
 		</div>
-		<!-- <div class="separator" use:melt={$separator}></div> -->
 
 		<div use:melt={$arrow}></div>
 	</div>

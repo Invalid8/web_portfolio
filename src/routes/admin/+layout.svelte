@@ -24,22 +24,24 @@
 
 	<Sidebar.Inset>
 		<header
-			class="sticky top-0 flex shrink-0 items-center gap-2 border-b p-4 bg-sidebar border-sidebar-border"
+			class="sticky top-0 shrink-0 border-b p-4 max-w-full bg-sidebar border-sidebar-border flex gap-6 justify-between sm:px-8 items-center"
 		>
-			<Sidebar.Trigger class="-ml-1" />
-			<Separator orientation="vertical" class="mr-2 h-4" />
-			<Breadcrumb.Root>
-				<Breadcrumb.List>
-					<Breadcrumb.Item class="hidden md:block">
-						<Breadcrumb.Link href="#">All Inboxes</Breadcrumb.Link>
-					</Breadcrumb.Item>
-					<Breadcrumb.Separator class="hidden md:block" />
-					<Breadcrumb.Item>
-						<Breadcrumb.Page>Inbox</Breadcrumb.Page>
-					</Breadcrumb.Item>
-				</Breadcrumb.List>
-			</Breadcrumb.Root>
-			<div class="relative ml-auto flex-1 md:grow-0">
+			<div class="flex items-center gap-2">
+				<Sidebar.Trigger class="-ml-1" />
+				<Separator orientation="vertical" class="mr-2 h-4" />
+				<Breadcrumb.Root>
+					<Breadcrumb.List>
+						<Breadcrumb.Item class="hidden md:block">
+							<Breadcrumb.Link href="#">All Inboxes</Breadcrumb.Link>
+						</Breadcrumb.Item>
+						<Breadcrumb.Separator class="hidden md:block" />
+						<Breadcrumb.Item>
+							<Breadcrumb.Page>Inbox</Breadcrumb.Page>
+						</Breadcrumb.Item>
+					</Breadcrumb.List>
+				</Breadcrumb.Root>
+			</div>
+			<div class="relative">
 				<DropdownMenu.Root>
 					<DropdownMenu.Trigger class={buttonVariants({variant: 'outline', size: 'icon'})}>
 						<img
@@ -65,8 +67,8 @@
 				in:fade={{duration: 300, delay: 400}}
 				out:fade={{duration: 300}}
 				class={cn(
-					isLoading && 'grid place-content-center place-items-center h-[85svh]',
-					!isLoading && 'flex flex-1 flex-col gap-4 p-4 w-full"'
+					isLoading && 'grid place-content-center place-items-center h-[85svh] relative',
+					!isLoading && 'flex flex-1 flex-col gap-4 p-4 max-w-[100vw] overflow-auto'
 				)}
 			>
 				{#if isLoading}

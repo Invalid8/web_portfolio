@@ -71,7 +71,7 @@
 	};
 </script>
 
-<div class="container max-w-screen-lg">
+<div class="container max-w-screen-lg p-6 sm:space-y-4 bg-sidebar h-full rounded-md">
 	<h1 class="text-2xl font-bold mb-6">Admin Bio Management</h1>
 
 	<!-- Name Section -->
@@ -92,7 +92,7 @@
 				<span class="text-sm font-medium text-subtext">Full Name</span>
 				<input
 					type="text"
-					class="mt-1 block w-full rounded-md border-input bg-background shadow-sm focus:border-primary focus:ring-primary"
+					class="mt-1 block w-full rounded-md bg-background shadow-sm focus:border-primary focus:ring-primary"
 					bind:value={bio.name}
 				/>
 			</label>
@@ -100,7 +100,7 @@
 				<span class="text-sm font-medium text-subtext">Username</span>
 				<input
 					type="text"
-					class="mt-1 block w-full rounded-md border-input bg-background shadow-sm focus:border-primary focus:ring-primary"
+					class="mt-1 block w-full rounded-md bg-background shadow-sm focus:border-primary focus:ring-primary"
 					bind:value={bio.username}
 				/>
 			</label>
@@ -108,7 +108,7 @@
 				<span class="text-sm font-medium text-subtext">Description</span>
 				<textarea
 					rows="3"
-					class="mt-1 block w-full rounded-md border-input bg-background shadow-sm focus:border-primary focus:ring-primary"
+					class="mt-1 block w-full rounded-md bg-background shadow-sm focus:border-primary focus:ring-primary"
 					bind:value={bio.description}
 				></textarea>
 			</label>
@@ -144,7 +144,7 @@
 				<textarea
 					rows="2"
 					maxlength="50"
-					class="mt-1 block w-full rounded-md border-input bg-background shadow-sm focus:border-primary focus:ring-primary"
+					class="mt-1 block w-full rounded-md bg-background shadow-sm focus:border-primary focus:ring-primary"
 					bind:value={bio.about.summary}
 				></textarea>
 			</label>
@@ -152,7 +152,7 @@
 				<span class="text-sm font-medium text-subtext">Full Details</span>
 				<textarea
 					rows="5"
-					class="mt-1 block w-full rounded-md border-input bg-background shadow-sm focus:border-primary focus:ring-primary"
+					class="mt-1 block w-full rounded-md bg-background shadow-sm focus:border-primary focus:ring-primary"
 					bind:value={bio.about.fullDetails}
 				></textarea>
 			</label>
@@ -185,7 +185,7 @@
 				<span class="text-sm font-medium text-subtext">GitHub</span>
 				<input
 					type="url"
-					class="mt-1 block w-full rounded-md border-input bg-background shadow-sm focus:border-primary focus:ring-primary"
+					class="mt-1 block w-full rounded-md bg-background shadow-sm focus:border-primary focus:ring-primary"
 					bind:value={bio.links.github}
 				/>
 			</label>
@@ -193,7 +193,7 @@
 				<span class="text-sm font-medium text-subtext">LinkedIn</span>
 				<input
 					type="url"
-					class="mt-1 block w-full rounded-md border-input bg-background shadow-sm focus:border-primary focus:ring-primary"
+					class="mt-1 block w-full rounded-md bg-background shadow-sm focus:border-primary focus:ring-primary"
 					bind:value={bio.links.linkedin}
 				/>
 			</label>
@@ -201,7 +201,7 @@
 				<span class="text-sm font-medium text-subtext">Resume</span>
 				<input
 					type="url"
-					class="mt-1 block w-full rounded-md border-input bg-background shadow-sm focus:border-primary focus:ring-primary"
+					class="mt-1 block w-full rounded-md bg-background shadow-sm focus:border-primary focus:ring-primary"
 					bind:value={bio.links.resume}
 				/>
 			</label>

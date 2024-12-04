@@ -1,15 +1,19 @@
 <script lang="ts">
 	import {browser} from '$app/environment';
-	import {onDestroy, onMount} from 'svelte';
+	import {onMount, onDestroy} from 'svelte';
 
 	let head: SVGGElement; // Reference to the head element
 	let eyes: SVGGElement; // Reference to the eyes element
 	let body: SVGGElement; // Reference to the body element
+	let randomMovementInterval: ReturnType<typeof setInterval>; // Interval for random movement
+	let lastMouseMoveTime = Date.now(); // Tracks the last mouse movement time
+	const randomMovementDelay = 3000; // Delay before resuming random movement (in ms)
 
 	function handleMouseMove(event: MouseEvent) {
-		if (!browser) {
-			return;
-		}
+		if (!browser) return;
+
+		// Update the last mouse move time
+		lastMouseMoveTime = Date.now();
 
 		// Get the window dimensions
 		const pageWidth = window.innerWidth;
@@ -26,7 +30,7 @@
 
 		// Move the body with a smaller effect for subtle motion
 		if (body) {
-			body.style.transform = `translate(${offsetX * 1}px, ${offsetY * 5}px)`; // Adjust sensitivity
+			body.style.transform = `translate(${offsetX * 3}px, ${offsetY * 5}px)`; // Adjust sensitivity
 		}
 
 		// Move the eyes more dramatically
@@ -35,20 +39,43 @@
 		}
 	}
 
-	// Add the event listener to the document
-	onMount(() => {
-		if (!browser) {
+	// Function for random eye movement
+	function moveEyesRandomly() {
+		if (!browser) return;
+
+		if (Date.now() - lastMouseMoveTime < randomMovementDelay) {
+			// If recent mouse movement, skip random motion
 			return;
 		}
-		window.addEventListener('mousemove', handleMouseMove);
+
+		// Generate random values for the eye's movement
+		const randomX = (Math.random() - 0.4) * 6;
+		const randomY = (Math.random() - 0.4) * 10;
+
+		if (head) {
+			head.style.transform = `translate(${randomX - 3}px, ${1}px)`; // Adjust sensitivity
+		}
+
+		if (eyes) {
+			eyes.style.transform = `translate(${randomX}px, ${randomY}px)`; // Apply random movement
+		}
+	}
+
+	onMount(() => {
+		if (!browser) return;
+		// Add mousemove listener to window
+		window?.addEventListener('mousemove', handleMouseMove);
+
+		// Start random eye movement interval
+		randomMovementInterval = setInterval(moveEyesRandomly, 1000); // Adjust interval as needed
 	});
 
-	// Cleanup on unmount
 	onDestroy(() => {
-		if (!browser) {
-			return;
-		}
-		window.removeEventListener('mousemove', handleMouseMove);
+		if (!browser) return;
+
+		// Cleanup event listener and interval
+		window?.removeEventListener('mousemove', handleMouseMove);
+		clearInterval(randomMovementInterval);
 	});
 </script>
 
@@ -290,7 +317,7 @@
 			class="animable"
 		></polygon></g
 	>
-	<g
+	<!-- <g
 		id="freepik--Rocket--inject-5"
 		style="transform-origin: 122.117px 156.521px 0px;"
 		class="animable"
@@ -485,7 +512,7 @@
 			id="el8ydohvdshrd"
 			class="animable"
 		></path></g
-	>
+	> -->
 
 	<g
 		id="freepik--Cat--inject-5"

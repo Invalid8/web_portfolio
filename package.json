@@ -27,6 +27,12 @@
     "test:integration": "playwright test",
     "test:unit": "vitest"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    }
+  },
   "devDependencies": {
     "@melt-ui/pp": "^0.3.2",
     "@melt-ui/svelte": "^0.86.0",
@@ -66,14 +72,23 @@
     "@sveltejs/vite-plugin-svelte-inspector": "^3.0.1",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
+    "@tiptap/core": "^2.10.3",
+    "@tiptap/extension-color": "^2.10.3",
+    "@tiptap/extension-list-item": "^2.10.3",
+    "@tiptap/extension-placeholder": "^2.10.3",
+    "@tiptap/extension-text-style": "^2.10.3",
+    "@tiptap/pm": "^2.10.3",
+    "@tiptap/starter-kit": "^2.10.3",
     "@uploadthing/svelte": "^7.1.1",
     "aos": "^2.3.4",
     "firebase": "^11.0.2",
     "firebase-admin": "^13.0.1",
     "marked": "^15.0.2",
     "runed": "^0.16.0",
+    "svelte-tiptap": "^2.1.0",
     "svelte-toasts": "^1.1.2",
     "tailwindcss-animate": "^1.0.7",
-    "uploadthing": "^7.3.0"
+    "uploadthing": "^7.3.0",
+    "zod": "^3.23.8"
   }
 }

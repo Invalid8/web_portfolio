@@ -3,7 +3,7 @@
 	import {cn} from '$lib/utils';
 	import {LogOutIcon} from 'lucide-svelte';
 
-	const {className} = $props();
+	const {className}: {className?: string} = $props();
 </script>
 
 <form method="POST" action="/api/auth?/logout" onsubmit={logout}>
