@@ -4,6 +4,7 @@
 	import {AppInfo, SiteData} from '$lib/common';
 	import {projects} from '$data/projects';
 	import {ArrowUpRight} from 'lucide-svelte';
+	import SpaceCat from '$components/SpaceCat.svelte';
 </script>
 
 <svelte:head>
@@ -88,7 +89,8 @@
 			</div>
 		</div>
 		<div class="box grid place-items-center md:basis-1/4">
-			<Astronaut />
+			<!-- <Astronaut /> -->
+			<SpaceCat />
 		</div>
 	</div>
 

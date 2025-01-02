@@ -58,10 +58,7 @@
 	}
 </script>
 
-<form
-	onsubmit={handleSubmit}
-	class="p-6 sm:space-y-4 bg-sidebar h-full rounded-md grid sm:grid-cols-2"
->
+<form onsubmit={handleSubmit} class="p-6 sm:space-y-4 bg-sidebar h-full rounded-md grid">
 	<h2>{type === 'edit' ? 'Edit Project' : 'Create Project'}</h2>
 
 	<label>

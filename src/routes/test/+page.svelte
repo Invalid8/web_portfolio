@@ -1,9 +1,7 @@
 <script>
-	import SpaceCat from '$components/SpaceCat.svelte';
-	import TestSpaceCat from '$components/SpaceCat.test.svelte';
+	import ProjectForm from '$components/forms/ProjectForm.svelte';
 </script>
 
-<div class="grid grid-cols-2 gap-12 place-content-center place-items-center h-[80svh]">
-	<TestSpaceCat />
-	<SpaceCat />
+<div class="max-w-screen-3xl mx-auto">
+	<ProjectForm />
 </div>

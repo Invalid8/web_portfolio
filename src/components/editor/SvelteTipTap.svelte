@@ -16,7 +16,7 @@
 		editor = createEditor({
 			extensions: [
 				StarterKit,
-				TextStyle.configure({types: [ListItem.name]}),
+				TextStyle.configure(),
 				Color.configure({types: [TextStyle.name, ListItem.name]}),
 				Placeholder.configure({placeholder: 'Write something...'})
 			],
@@ -26,6 +26,7 @@
 					class: 'content-boxy border-2 border-black rounded-b-md p-3 outline-none focus:border'
 				}
 			},
+			onFocus: () => {},
 			onTransaction: () => {
 				// force re-render so `editor?.isActive` works as expected
 				editor = editor;
@@ -33,10 +34,12 @@
 		});
 	});
 
-	const toggleHeading = (level: 1 | 2) => {
-		return () => {
-			$editor.chain().focus().toggleHeading({level}).run();
-		};
+	const toggleHeading1 = () => {
+		$editor.chain().focus().toggleHeading({level: 1}).run();
+	};
+
+	const toggleHeading2 = () => {
+		$editor.chain().focus().toggleHeading({level: 2}).run();
 	};
 
 	const toggleBold = () => {
@@ -66,13 +69,13 @@
 	const menuItems = $state([
 		{
 			name: 'heading-1',
-			command: toggleHeading(1),
+			command: toggleHeading1,
 			content: 'H1',
 			active: isActive('heading', {level: 1})
 		},
 		{
 			name: 'heading-2',
-			command: toggleHeading(2),
+			command: toggleHeading2,
 			content: 'H2',
 			active: isActive('heading', {level: 2})
 		},
@@ -126,5 +129,7 @@
 		</div>
 	{/if}
 
-	<EditorContent editor={$editor} />
+	<div class="flex-1 relative cursor-text">
+		<EditorContent editor={$editor} />
+	</div>
 </div>
