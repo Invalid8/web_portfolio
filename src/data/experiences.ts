@@ -51,7 +51,7 @@ export const experiences: Experience[] = [
 		position: {
 			title: 'Frontend Developer',
 			role: 'Architect and maintain scalable frontend systems using modern frameworks, ensuring optimal performance and seamless user experiences for The Gigs platform.',
-			duration: 'May 2024 - Present'
+			duration: 'May 2024 - Jan 2025'
 		},
 		company: {
 			name: 'TheGigs',
