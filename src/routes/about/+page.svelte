@@ -17,15 +17,16 @@
 		</div>
 		<div class="info space-y-4">
 			<p class="text-2xl font-medium">
-				I am a front-end developer based in Nigeria, with a Computer Science background.
+				I am a Frontend (Web|Mobile) Developer based in Nigeria, with a Computer Science background.
 			</p>
 			<p class="text-subtext">
-				I am a front-end developer based in Nigeria with a strong foundation in Computer Science. I
-				specialize in building accessible and user-friendly web applications, with a particular
-				focus on React.js, Next.js, and TypeScript. Passionate about solving complex problems, I’m
-				also exploring Rust, Go, and UI/UX design to expand my skills. When I'm not coding, I enjoy
-				gaming, playing Mobile Legends, and diving into new technologies to stay ahead in my field.
-				Always curious and eager to learn, I aim to create impactful solutions through technology.
+				I am a Frontend (Web|Mobile) Developer based in Nigeria with a strong foundation in Computer
+				Science. I specialize in building accessible and user-friendly web applications, with a
+				particular focus on React.js, React Native, Next.js, and TypeScript. Passionate about
+				solving complex problems, I’m also exploring Rust, Go, and UI/UX design to expand my skills.
+				When I'm not coding, I enjoy gaming, playing Mobile Legends, and diving into new
+				technologies to stay ahead in my field. Always curious and eager to learn, I aim to create
+				impactful solutions through technology.
 			</p>
 			<div class="btn-box flex gap-2 pt-4 sm:gap-4 items-center flex-wrap sm:flex-nowrap">
 				<a

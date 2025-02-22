@@ -103,15 +103,16 @@
 		</div>
 		<div class="info space-y-4">
 			<p class="text-2xl font-medium">
-				I am a front-end developer based in Nigeria. Has Computer Science background.
+				I am a Frontend (Web|Mobile) Developer based in Nigeria. Has Computer Science background.
 			</p>
 			<p class="text-subtext">
-				I am a front-end developer based in Nigeria with a strong foundation in Computer Science. I
-				specialize in building accessible and user-friendly web applications, with a particular
-				focus on React.js, Next.js, and TypeScript. Passionate about solving complex problems, I’m
-				also exploring Rust, Go, and UI/UX design to expand my skills. When I'm not coding, I enjoy
-				gaming, playing Mobile Legends, and diving into new technologies to stay ahead in my field.
-				Always curious and eager to learn, I aim to create impactful solutions through technology.
+				I am a Frontend (Web|Mobile) Developer based in Nigeria with a strong foundation in Computer
+				Science. I specialize in building accessible and user-friendly web applications, with a
+				particular focus on React.js, React Native, Next.js, and TypeScript. Passionate about
+				solving complex problems, I’m also exploring Rust, Go, and UI/UX design to expand my skills.
+				When I'm not coding, I enjoy gaming, playing Mobile Legends, and diving into new
+				technologies to stay ahead in my field. Always curious and eager to learn, I aim to create
+				impactful solutions through technology.
 			</p>
 			<br />
 			<a href="/about" class="text-primary uppercase border-b-2 pb-2 border-primary"
@@ -130,7 +131,8 @@
 		<div class="he_ max-w-xl">
 			<h2 class="sub-title text-4xl md:text-6xl font-Bebas">Featured Projects</h2>
 			<small class="text-subtext text-sm"
-				>Here are some of the selected projects that showcase my passion for front-end development.</small
+				>Here are some of the selected projects that showcase my passion for Frontend (Web|Mobile)
+				Development.</small
 			>
 		</div>
 		<div class="bo_">

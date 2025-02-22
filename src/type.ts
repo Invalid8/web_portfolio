@@ -1,5 +1,5 @@
 export type Project = {
-	id: number;
+	id: number | string;
 	thumbnail: string;
 	medias: {link: string; type: 'image' | 'video'}[];
 	title: string;

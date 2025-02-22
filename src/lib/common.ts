@@ -2,10 +2,10 @@ import {browser} from '$app/environment';
 import {goto} from '$app/navigation';
 
 export const AppInfo = {
-	title: 'Web Portfolio',
-	description: 'Your personal website and portfolio.',
+	title: 'My Portfolio',
+	description: 'My personal website and portfolio.',
 	author: 'Dalgoridim',
-	url: 'https://fullstack-svelte-portfolio.vercel.app',
+	url: 'https://dantolu33.vercel.app',
 	links: {
 		github: 'https://github.com/invalid8',
 		linkedin: 'https://www.linkedin.com/in/daniel-fadamitan-a08052247/',
@@ -21,7 +21,7 @@ export const AppInfo = {
 export const SiteData = {
 	name: 'Daniel Fadamitan',
 	summary:
-		'A nigerian based front-end developer passionate about building accessible and user friendly websites.'
+		'A Nigerian based Frontend (Web|Mobile) developer passionate about building accessible and user friendly websites and apps.'
 };
 
 export function toSlug(value: string, remove?: boolean) {

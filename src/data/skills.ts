@@ -47,6 +47,15 @@ export const skills: Skill[] = [
 		color: '#61DAFB'
 	},
 	{
+		id: 5,
+		key: 'react-native',
+		value: 'React Native',
+		skillLevel: 90,
+		description: 'Building interactive Mobile Apps with reusable components.',
+		img: '/assets/image/skill/react-native.svg',
+		color: '#61DAAD'
+	},
+	{
 		id: 6,
 		key: 'next-js',
 		value: 'Next.js',
