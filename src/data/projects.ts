@@ -2,6 +2,24 @@ import type {Project} from '$type';
 
 export const projects: Project[] = [
 	{
+		id: '1-0',
+		thumbnail: '/images/web3-landing.png',
+		medias: [
+			{
+				link: 'https://placehold.co/800x400/EC757D/EEEFFF?text=Web3+Portfolio',
+				type: 'image'
+			}
+		],
+		title: 'Web3 Landing',
+		description: 'An angular developed web3 landing page.',
+		content: '### About Web3 Landing\nWeb3 landing page is angular developed',
+		link: 'https://web3-portfolio-three.vercel.app/',
+		github: 'https://github.com/invalid8/web3-portfolio',
+		role: 'Frontend Developer',
+		date: '2025-03-18',
+		type: 'vibe code'
+	},
+	{
 		id: '1',
 		thumbnail: '/images/pollproxy.png',
 		medias: [
