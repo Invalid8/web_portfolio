@@ -9,7 +9,7 @@ export const AppInfo = {
 	links: {
 		github: 'https://github.com/invalid8',
 		linkedin: 'https://www.linkedin.com/in/daniel-fadamitan-a08052247/',
-		resume: 'https://drive.google.com/file/d/1ixmuBYgzXQdXrTn1n9aoz4SWYRU715h-/view'
+		resume: 'https://drive.google.com/file/d/113HwHaQGrUmyk41jFFqJvgo44taK7aVJ/view'
 	},
 	contact: {
 		email: 'b.fadamitan2019@gmail.com',
